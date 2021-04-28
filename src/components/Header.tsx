@@ -121,6 +121,6 @@ export const Header: React.FC<IHeaderProps> = ({ accentColor, activeLink, sameSi
         </HeaderSide>
       </HeaderContainer>
       <HeaderModal title="Products by The Guild" modalOpen={modalOpen} onCancelModal={() => handleModal(false)} />
-    </HeaderWrapper >
+    </HeaderWrapper>
   );
 };

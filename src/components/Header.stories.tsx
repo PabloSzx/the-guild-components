@@ -5,7 +5,7 @@ import { IHeaderProps } from './types';
 import { Header } from './Header';
 
 export default {
-  title: 'Header',
+  title: 'Design System/Components/Header',
   component: Header,
   argTypes: {
     accentColor: {

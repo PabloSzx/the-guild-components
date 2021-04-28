@@ -5,7 +5,7 @@ import { ISearchBarProps } from './types';
 import { SearchBar } from './SearchBar';
 
 export default {
-  title: 'Search Bar',
+  title: 'Design System/Components/Search Bar',
   component: SearchBar,
   argTypes: {
     accentColor: {

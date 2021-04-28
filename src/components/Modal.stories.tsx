@@ -5,7 +5,7 @@ import { IModalProps } from './types';
 import { Modal } from './Modal';
 
 export default {
-  title: 'Modal',
+  title: 'Design System/Components/Modal',
   component: Modal,
   argTypes: {
     title: {

@@ -1,0 +1,39 @@
+import tw, { css, styled } from 'twin.macro';
+
+export const Wrapper = styled.section(() => [
+  tw`bg-white font-sans`,
+]);
+
+export const Container = styled.div(() => [
+  tw`box-border container mx-auto py-12`,
+]);
+
+export const Title = styled.h2(() => [
+  tw`mt-0 mb-4 text-2xl md:text-3xl`,
+]);
+
+export const Items = styled.div(() => [
+  tw`flex flex-wrap`,
+]);
+
+export const Item = styled.article(() => [
+  tw`box-border flex flex-col w-full max-w-lg pr-10 mb-9 last:mb-0`,
+  tw`md:w-1/2 lg:(w-1/3 mb-0)`,
+
+  css`
+    h3 {
+      ${tw`m-0 text-base text-black font-semibold`}
+    }
+
+    p {
+      ${tw`flex-grow mt-2 text-sm text-gray-500`}
+    }
+
+    a {
+      ${[
+      tw`w-max mt-auto text-sm text-light-blue no-underline hover:opacity-50`,
+      tw`transition duration-300 ease-in-out`
+    ]}
+    }
+  `
+]);

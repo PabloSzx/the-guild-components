@@ -2,6 +2,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     container: {
+      padding: '1.5rem',
       screens: {
         'xl': '1200px',
         '2xl': '1200px',
@@ -11,6 +12,9 @@ module.exports = {
       'sans': ['Poppins', 'sans-serif'],
     },
     extend: {
+      colors: {
+        'light-blue': '#1CC8EE',
+      },
       screens: {
         'xs': '360px',
       },
@@ -23,7 +27,7 @@ module.exports = {
       borderWidth: {
         '3': '3px',
       },
-    },
+    }
   },
   plugins: [],
 }

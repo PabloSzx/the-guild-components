@@ -5,7 +5,7 @@ import { IHeaderModalProps } from './types';
 import { HeaderModal } from './HeaderModal';
 
 export default {
-  title: 'Header Modal',
+  title: 'Design System/Components/Header/Header Modal',
   component: HeaderModal,
   argTypes: {
     title: {

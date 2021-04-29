@@ -2,6 +2,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     container: {
+      center: true,
       padding: '1.5rem',
       screens: {
         'xl': '1200px',
@@ -17,6 +18,9 @@ module.exports = {
       },
       screens: {
         'xs': '360px',
+      },
+      zIndex: {
+        '1': 1
       },
       height: {
         '4.5': '1.125rem',

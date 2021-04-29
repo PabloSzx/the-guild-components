@@ -5,7 +5,7 @@ export const Wrapper = styled.footer(() => [
 ]);
 
 export const Container = styled.div(() => [
-  tw`box-border container flex flex-col flex-wrap md:flex-row justify-between items-center mx-auto pb-4 md:pb-5`,
+  tw`box-border container flex flex-col flex-wrap md:flex-row justify-between items-center pb-4 md:pb-5`,
 ]);
 
 export const Line = styled.hr(() => [

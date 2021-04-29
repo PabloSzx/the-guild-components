@@ -1,5 +1,7 @@
 import featureListImage from '../static/icons/features/envelop-pluggable.svg';
-import heroIllustrationImage from '../static/icons/features/envelop-communication.svg';
+import heroIllustrationImage from '../static/illustrations/envelop-communication.svg';
+import heroGradientImage from '../static/illustrations/envelop-hero.svg';
+import subheaderImage from '../static/logos/products/envelop.svg';
 
 export const dummyFeatureList = {
   title: "The best and simple features",
@@ -83,4 +85,63 @@ export const dummyHeroIllustration = {
     alt: 'Illustration'
   },
   flipped: true
+};
+
+export const dummyHeroGradient = {
+  title: "A GraphQL server framework for improved developer experience",
+  description: 'Use any Node framework and any GraphQL feature, with the easiest plugins system - A new framework by The Guild',
+  link: {
+    label: 'Get started',
+    title: 'Learn more about GraphQL Envelop',
+    href: '/get-started'
+  },
+  version: '1.0.7',
+  colors: ['#FF34AE', "#1CC8EE"],
+  image: {
+    src: heroGradientImage,
+    alt: 'Illustration'
+  }
+};
+
+export const dummySubheader = {
+  product: {
+    title: 'Envelop',
+    description: 'Modern GraphQL Framework',
+    image: {
+      src: subheaderImage,
+      alt: 'Envelop',
+    }
+  },
+  activeLink: '/',
+  links: [{
+    label: 'Home',
+    title: 'Visit our Homepage',
+    href: '/',
+    active: false,
+  }, {
+    label: 'Marketplace',
+    title: 'Browse the marketplace',
+    href: '/marketplace',
+    active: false,
+  }, {
+    label: 'Features',
+    title: 'Discover Envelop\'s features',
+    href: '/features',
+    active: false,
+  }, {
+    label: 'API & Doc',
+    title: 'Learn more about Envelop',
+    href: '/docs',
+    active: false,
+  }, {
+    label: 'Github',
+    title: 'See our Github profile',
+    href: 'https://github.com/dotansimha/envelop',
+    active: false,
+  }],
+  cta: {
+    label: 'Get started',
+    title: 'Learn more about Envelop',
+    href: '/get-started'
+  },
 };

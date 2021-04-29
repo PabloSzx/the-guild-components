@@ -2,6 +2,7 @@ interface ILink {
   label: string
   title: string
   href: string
+  active?: boolean
 }
 
 interface IImage {
@@ -18,6 +19,17 @@ export interface IHeaderProps {
   activeLink: string
   sameSite?: boolean
   themeSwitch?: boolean
+}
+
+export interface ISubheaderProps {
+  product: {
+    title: string
+    description: string
+    image: IImage
+  }
+  activeLink: string
+  links: ILink[]
+  cta: ILink
 }
 
 export interface IHeaderModalProps {
@@ -66,6 +78,14 @@ export interface IHeroIllustrationProps {
   title?: string
   description: string
   flipped?: boolean
+  link?: ILink
+  image: IImage
+}
+export interface IHeroGradientProps {
+  title: string
+  description: string
+  colors?: string[]
+  version?: string
   link?: ILink
   image: IImage
 }

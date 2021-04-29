@@ -4,6 +4,8 @@ import hamburgerIconDark from '../static/icons/hamburger-dark.svg';
 import hamburgerIconLight from '../static/icons/hamburger-light.svg';
 import caretIconDark from '../static/icons/caret-down-dark.svg';
 import caretIconLight from '../static/icons/caret-down-light.svg';
+import caretSlimIconDark from '../static/icons/caret-down-slim-dark.svg';
+import caretSlimIconLight from '../static/icons/caret-down-slim-light.svg';
 import closeIconDark from '../static/icons/close-dark.svg';
 import closeIconLight from '../static/icons/close-light.svg';
 
@@ -39,6 +41,7 @@ export const headerThemedIcons = (isDark: boolean) => ({
   themeToggle: isDark ? moonIconLight : moonIconDark,
   menu: isDark ? hamburgerIconLight : hamburgerIconDark,
   caret: isDark ? caretIconLight : caretIconDark,
+  caretSlim: isDark ? caretSlimIconLight : caretSlimIconDark,
   close: isDark ? closeIconLight : closeIconDark,
   logoFull: isDark ? logoFullLight : logoFullDark,
   logoMono: isDark ? logoMonoLight : logoMonoDark

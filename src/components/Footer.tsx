@@ -40,7 +40,7 @@ export const Footer: React.FC = () => (
       <Links>
         {links.map(link => (
           <li key={link.label}>
-            <a href={link.href} title={link.title} rel="noopener noreferrer">
+            <a href={link.href} title={link.title} target="_blank" rel="noopener noreferrer">
               {link.label}
             </a>
           </li>

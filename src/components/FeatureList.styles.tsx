@@ -5,11 +5,11 @@ export const Wrapper = styled.section(() => [
 ])
 
 export const Container = styled.div(() => [
-  tw`box-border container mx-auto py-14`,
+  tw`box-border container py-14`,
 ]);
 
 export const Title = styled.h2(() => [
-  tw`mt-0 mb-4 text-center text-2xl md:text-3xl`,
+  tw`mt-0 mb-4 font-bold text-center text-2xl md:text-3xl`,
 ]);
 
 export const Items = styled.div(() => [
@@ -26,7 +26,7 @@ export const Item = styled.article(() => [
     }
 
     h3 {
-      ${tw`m-0 text-lg text-black`}
+      ${tw`m-0 font-bold text-lg text-black`}
     }
 
     p {

@@ -17,7 +17,7 @@ export const HeaderWrapper = styled.header(() => [
 ]);
 
 export const HeaderContainer = styled.div(() => [
-  tw`container flex justify-between items-center mx-auto`
+  tw`box-border container flex justify-between items-center px-0`
 ]);
 
 export const HeaderNav = styled.nav(({ isModalOpen }: IStyleProps) => [

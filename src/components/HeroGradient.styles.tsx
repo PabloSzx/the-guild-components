@@ -1,0 +1,120 @@
+import tw, { css, styled } from 'twin.macro';
+
+interface IStyleProps {
+  colors?: string[]
+}
+
+export const Wrapper = styled.section(() => [
+  tw`font-sans text-white overflow-hidden md:(pt-16)`
+]);
+
+export const Container = styled.div(() => [
+  tw`box-border relative container mb-32 pt-8 pb-72`,
+  tw`md:(mb-4 px-10 pt-24 pb-14)`
+]);
+
+export const CTA = styled.div(() => [
+  tw`relative z-1 flex items-center mt-4 md:mt-9 text-xs`,
+  css`
+    a {
+      ${[
+      tw`block w-32 mr-4 px-1.5 py-3 font-medium text-xs text-center text-black bg-white rounded-md no-underline hover:opacity-80`,
+      tw`transition duration-300 ease-in-out`
+    ]}
+    }
+
+    span {
+      ${tw`text-white opacity-60`}
+    }
+  `
+]);
+
+export const Image = styled.img(() => [
+  tw`absolute w-full max-w-sm -bottom-36 -right-4 sm:(max-w-md) md:(-top-14 -right-20)`,
+]);
+
+export const Info = styled.div(() => [
+  tw`relative z-1`,
+  css`
+    h1, p {
+      ${tw`m-0`}
+    }
+
+    h1 {
+      ${[
+      tw`max-w-lg mb-2.5 font-bold text-2xl md:text-3xl`,
+      css`line-height: 2.5rem !important;`
+    ]}
+    }
+
+    p {
+      ${tw`max-w-md text-base md:text-lg text-gray-50 opacity-70`}
+    }
+  `
+]);
+
+export const Gradient = styled.div(({ colors }: IStyleProps) => [
+  tw`absolute inset-0 bg-black md:rounded-3xl overflow-hidden`,
+  css`
+    span {
+      ${[
+      tw`absolute transform -translate-x-1/2 -translate-y-1/2`,
+      css`
+        height: 500px;
+        width: 500px;
+        border-radius: 500px;
+        filter: blur(75px);
+      `,
+    ]}
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        background-color: ${colors && colors[0] || 'black'};
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        background-color: ${colors && colors[1] || 'black'};
+      }
+
+      &:nth-child(1) {
+        top: -100px;
+        left: -40px;
+      }
+
+      &:nth-child(2) {
+        ${tw`hidden md:block`}
+        top: -20px;
+        right: -450px;
+      }
+
+      &:nth-child(3) {
+        right: -350px;
+        bottom: -500px;
+        filter: blur(90px);
+      }
+
+      &:nth-child(4) {
+        left: -50px;
+        bottom: -600px;
+      }
+
+      @media screen and (max-width: 767px) {
+        &:nth-child(1) {
+          top: -115px;
+          left: -15px
+        }
+
+        &:nth-child(3) {
+          right: -700px;
+          bottom: -450px;
+        }
+
+        &:nth-child(4) {
+          left: -10px;
+          bottom: -475px;
+        }
+      }
+    }
+  `,
+]);

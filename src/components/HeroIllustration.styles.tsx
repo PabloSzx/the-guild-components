@@ -9,7 +9,7 @@ export const Wrapper = styled.section(() => [
 ])
 
 export const Container = styled.div(({ flipped }: IStyleProps) => [
-  tw`box-border container flex flex-wrap items-center mx-auto py-8`,
+  tw`box-border container flex flex-wrap items-center py-8`,
   tw`lg:(flex-nowrap justify-center)`,
   flipped && tw`lg:flex-row-reverse`
 ]);
@@ -29,7 +29,7 @@ export const Info = styled.div(() => [
   tw`mb-6 lg:mb-0`,
   css`
     h2 {
-      ${tw`max-w-sm m-0 text-3xl`}
+      ${tw`max-w-sm m-0 font-bold text-2xl md:text-3xl`}
     }
 
     p {

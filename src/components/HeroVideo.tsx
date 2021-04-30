@@ -13,7 +13,7 @@ export const HeroVideo: React.FC<IHeroVideoProps> = ({ title, description, link,
   <Wrapper>
     <Container flipped={flipped}>
       <Info>
-        {title && <h2>{title}</h2>}
+        <h2>{title}</h2>
         <p>{description}</p>
         {link && <a href={link.href} title={link.title}>{link.label}</a>}
       </Info>

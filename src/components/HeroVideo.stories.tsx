@@ -6,9 +6,30 @@ import { dummyHeroVideo } from '../helpers/dummy';
 import { HeroVideo } from './HeroVideo';
 
 export default {
-  title: 'Design System/Components/Hero/Video',
+  title: 'Components/Hero/Video',
   component: HeroVideo,
-  argTypes: {},
+  argTypes: {
+    title: {
+      name: 'Title'
+    },
+    description: {
+      name: 'Description'
+    },
+    video: {
+      name: 'Video'
+    },
+    flipped: {
+      name: 'Flip orientation'
+    },
+    link: {
+      name: 'Link'
+    },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    }
+  }
 } as Meta
 
 const Template: Story<IHeroVideoProps> = args => (

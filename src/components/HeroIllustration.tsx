@@ -16,7 +16,7 @@ export const HeroIllustration: React.FC<IHeroIllustrationProps> = ({ title, desc
         <img src={image.src} alt={image.alt} />
       </Illustration>
       <Info>
-        {title && <h2>{title}</h2>}
+        <h2>{title}</h2>
         <p>{description}</p>
         {link && <a href={link.href} title={link.title}>{link.label}</a>}
       </Info>

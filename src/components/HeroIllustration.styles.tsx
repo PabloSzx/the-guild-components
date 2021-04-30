@@ -15,8 +15,8 @@ export const Container = styled.div(({ flipped }: IStyleProps) => [
 ]);
 
 export const Illustration = styled.div(({ flipped }: IStyleProps) => [
-  tw`flex h-auto w-full mb-6 bg-white`,
-  tw`md:(h-96 w-2/5 mb-0)`,
+  tw`flex w-full mb-6 bg-white`,
+  tw`md:(w-2/5 mb-0)`,
   css`
     img {
       ${tw`w-full max-w-md`}

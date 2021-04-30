@@ -72,14 +72,14 @@ export interface IInfoListProps {
   }[]
 }
 export interface IHeroVideoProps {
-  title?: string
+  title: string
   description: string
   flipped?: boolean
   link?: ILink
   video: IVideo
 }
 export interface IHeroIllustrationProps {
-  title?: string
+  title: string
   description: string
   flipped?: boolean
   link?: ILink

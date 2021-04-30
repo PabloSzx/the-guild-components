@@ -21,8 +21,15 @@ import {
 } from '../../helpers/dummy';
 
 export default {
-  title: 'Design System/Projects/Envelop',
-  argTypes: {},
+  title: 'Products/Envelop',
+  argTypes: {
+    page: {
+      table: {
+        disable: true
+      },
+      control: false
+    },
+  },
 } as Meta
 
 const Template: Story = ({ page }) => {

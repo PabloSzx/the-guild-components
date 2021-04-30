@@ -5,7 +5,7 @@ import { IModalProps } from './types';
 import { Modal } from './Modal';
 
 export default {
-  title: 'Design System/Components/Modal',
+  title: 'Components/Modal',
   component: Modal,
   argTypes: {
     title: {
@@ -31,6 +31,11 @@ export default {
       control: false,
     },
   },
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    }
+  }
 } as Meta
 
 const Template: Story<IModalProps> = args => (

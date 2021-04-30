@@ -5,7 +5,7 @@ import { IHeaderModalProps } from './types';
 import { HeaderModal } from './HeaderModal';
 
 export default {
-  title: 'Design System/Components/Header/Header Modal',
+  title: 'Components/Header/Header Modal',
   component: HeaderModal,
   argTypes: {
     title: {
@@ -29,6 +29,11 @@ export default {
       control: false
     },
   },
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    }
+  }
 } as Meta
 
 const Template: Story<IHeaderModalProps> = args => (

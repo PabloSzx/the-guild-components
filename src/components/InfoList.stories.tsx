@@ -6,9 +6,21 @@ import { dummyInfoList } from '../helpers/dummy';
 import { InfoList } from './InfoList';
 
 export default {
-  title: 'Design System/Components/Info List',
+  title: 'Components/List/Info List',
   component: InfoList,
-  argTypes: {},
+  argTypes: {
+    title: {
+      name: 'Title'
+    },
+    items: {
+      name: 'Items'
+    },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    }
+  }
 } as Meta
 
 const Template: Story<IInfoListProps> = args => (

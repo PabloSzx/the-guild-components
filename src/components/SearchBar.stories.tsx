@@ -5,7 +5,7 @@ import { ISearchBarProps } from './types';
 import { SearchBar } from './SearchBar';
 
 export default {
-  title: 'Design System/Components/Search Bar',
+  title: 'Components/Search Bar',
   component: SearchBar,
   argTypes: {
     accentColor: {
@@ -20,7 +20,7 @@ export default {
       description: 'Property displayed in component\'s input',
     },
     title: {
-      name: 'Title',
+      name: 'Modal Title',
       description: 'Property displayed in component\'s modal header',
     },
   }

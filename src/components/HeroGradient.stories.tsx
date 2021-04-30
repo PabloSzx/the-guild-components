@@ -6,9 +6,33 @@ import { dummyHeroGradient } from '../helpers/dummy';
 import { HeroGradient } from './HeroGradient';
 
 export default {
-  title: 'Design System/Components/Hero/Gradient',
+  title: 'Components/Hero/Gradient',
   component: HeroGradient,
-  argTypes: {},
+  argTypes: {
+    title: {
+      name: 'Title'
+    },
+    description: {
+      name: 'Description'
+    },
+    image: {
+      name: 'Illustration'
+    },
+    link: {
+      name: 'Call to Action'
+    },
+    version: {
+      name: 'Library Version'
+    },
+    colors: {
+      name: 'Background Glow Colors'
+    }
+  },
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    }
+  }
 } as Meta
 
 const Template: Story<IHeroGradientProps> = args => (

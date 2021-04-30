@@ -6,9 +6,21 @@ import { dummyFeatureList } from '../helpers/dummy';
 import { FeatureList } from './FeatureList';
 
 export default {
-  title: 'Design System/Components/Feature List',
+  title: 'Components/List/Feature List',
   component: FeatureList,
-  argTypes: {},
+  argTypes: {
+    title: {
+      name: 'Title'
+    },
+    items: {
+      name: 'Features'
+    }
+  },
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    }
+  }
 } as Meta
 
 const Template: Story<IFeatureListProps> = args => (

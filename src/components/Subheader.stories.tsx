@@ -6,10 +6,32 @@ import { dummySubheader } from '../helpers/dummy';
 import { Subheader } from './Subheader';
 
 export default {
-  title: 'Design System/Components/Subheader',
+  title: 'Components/Subheader',
   component: Subheader,
   argTypes: {
+    product: {
+      name: 'Product Information'
+    },
+    links: {
+      name: 'Navigation Links'
+    },
+    cta: {
+      name: 'Call to Action'
+    },
+    activeLink: {
+      name: 'Active Link',
+      description: 'Used ',
+      control: {
+        type: 'radio',
+        options: ['/', '/marketplace', '/features', '/docs']
+      }
+    },
   },
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    }
+  }
 } as Meta
 
 const Template: Story<ISubheaderProps> = args => (

@@ -76,3 +76,7 @@ export const searchBarThemedIcons = (isDark: boolean) => ({
 export const modalThemedIcons = (isDark: boolean) => ({
   close: isDark ? closeIconLight : closeIconDark,
 })
+
+export const footerThemedAssets = (isDark: boolean) => ({
+  logo: isDark ? logoMonoLight : logoMonoDark,
+})

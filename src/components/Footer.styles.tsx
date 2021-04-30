@@ -5,7 +5,7 @@ export const Wrapper = styled.footer(() => [
 ]);
 
 export const Container = styled.div(() => [
-  tw`box-border container flex flex-col flex-wrap md:flex-row justify-between items-center pb-4 md:pb-5`,
+  tw`container-min flex flex-col flex-wrap md:flex-row justify-between items-center pb-4 md:pb-5`,
 ]);
 
 export const Line = styled.hr(() => [
@@ -16,8 +16,17 @@ export const Copyright = styled.p(() => [
   tw`flex-1 hidden md:block text-xs text-gray-500`,
 ]);
 
-export const Logo = styled.img(() => [
-  tw`mb-3 md:mb-0 opacity-30`
+export const Logo = styled.a(() => [
+  css`
+    img {
+      ${tw`mb-3 md:mb-0 opacity-30 transition duration-200 ease-in-out`}
+    }
+    &:hover {
+      img {
+        ${tw`opacity-100`}
+      }
+    }
+  `
 ]);
 
 export const Links = styled.ul(() => [
@@ -34,8 +43,8 @@ export const Links = styled.ul(() => [
 
     a {
       ${[
-      tw`inline-block text-xs text-gray-500 no-underline hover:opacity-50`,
-      tw`transition duration-300 ease-in-out`,
+      tw`inline-block text-xs text-gray-500 no-underline hover:text-black`,
+      tw`transition duration-200 ease-in-out`,
     ]}
     }
   `

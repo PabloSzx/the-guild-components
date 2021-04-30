@@ -5,11 +5,11 @@ export const Wrapper = styled.section(() => [
 ])
 
 export const Container = styled.div(() => [
-  tw`box-border container py-14`,
+  tw`container-min py-14`,
 ]);
 
 export const Title = styled.h2(() => [
-  tw`mt-0 mb-4 font-bold text-center text-2xl md:text-3xl`,
+  tw`mt-0 mb-6 font-bold text-center text-2xl md:text-3xl`,
 ]);
 
 export const Items = styled.div(() => [

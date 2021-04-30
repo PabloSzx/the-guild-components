@@ -1,6 +1,8 @@
-import featureListImage from '../static/icons/features/envelop-pluggable.svg';
-import heroIllustrationImage from '../static/illustrations/envelop-communication.svg';
-import heroGradientImage from '../static/illustrations/envelop-hero.svg';
+import featureListImage1 from '../static/icons/features/envelop-pluggable.png';
+import featureListImage2 from '../static/icons/features/envelop-performant.png';
+import featureListImage3 from '../static/icons/features/envelop-modern.png';
+import heroIllustrationImage from '../static/illustrations/envelop-communication.png';
+import heroGradientImage from '../static/illustrations/envelop-hero.png';
 import subheaderImage from '../static/logos/products/envelop.svg';
 
 export const dummyFeatureList = {
@@ -8,21 +10,21 @@ export const dummyFeatureList = {
   items: [{
     image: {
       alt: 'Toy Brick Icon',
-      src: featureListImage
+      src: featureListImage1
     },
     title: 'Pluggable',
     description: 'Powerful plugin system',
   }, {
     image: {
       alt: 'Gauge Icon',
-      src: featureListImage
+      src: featureListImage2
     },
     title: 'Performant',
     description: 'Use any Node framework, use any execution',
   }, {
     image: {
       alt: 'Toy Brick Icon',
-      src: featureListImage
+      src: featureListImage3
     },
     title: 'Modern',
     description: 'Use all the latest GraphQL Capabilities',

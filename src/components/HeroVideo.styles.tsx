@@ -9,18 +9,18 @@ export const Wrapper = styled.section(() => [
 ])
 
 export const Container = styled.div(({ flipped }: IStyleProps) => [
-  tw`box-border container flex flex-wrap py-8`,
-  tw`lg:(flex-nowrap justify-center items-center)`,
-  flipped && tw`lg:flex-row-reverse`
+  tw`container-min flex flex-wrap py-8`,
+  tw`md:(flex-nowrap justify-center items-center)`,
+  flipped && tw`md:flex-row-reverse`
 ]);
 
 export const Video = styled.div(({ flipped }: IStyleProps) => [
-  tw`h-96 w-full lg:w-2/5 bg-white rounded-xl shadow-xl`,
-  flipped ? tw`lg:mr-8` : tw`lg:ml-8`
+  tw`w-full h-72 sm:(h-96) md:(h-72 w-3/5) lg:h-96 bg-white rounded-xl shadow-xl`,
+  flipped ? tw`md:mr-8` : tw`md:ml-8`
 ]);
 
 export const Info = styled.div(() => [
-  tw`mb-6 lg:mb-0`,
+  tw`mt-8 mb-16 md:my-0`,
   css`
     h2 {
       ${tw`max-w-sm m-0 font-bold text-2xl md:text-3xl`}

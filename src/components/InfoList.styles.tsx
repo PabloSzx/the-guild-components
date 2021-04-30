@@ -5,7 +5,7 @@ export const Wrapper = styled.section(() => [
 ]);
 
 export const Container = styled.div(() => [
-  tw`box-border container py-12`,
+  tw`container-min py-12`,
 ]);
 
 export const Title = styled.h2(() => [

@@ -1,7 +1,6 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { GlobalStyles } from '../../helpers/styles';
-import { ThemeProvider } from '../../helpers/theme';
 
 import { Footer } from '../Footer';
 import { FeatureList } from '../FeatureList';
@@ -38,13 +37,13 @@ const Template: Story = ({ page }) => {
   }
 
   return (
-    <ThemeProvider>
+    <>
       <GlobalStyles />
       <Header accentColor="#ED2E7E" activeLink="/open-source" />
       <Subheader {...dummySubheader} />
       {pages[page]}
       <Footer />
-    </ThemeProvider>
+    </>
   )
 }
 

@@ -1,5 +1,3 @@
-import './storybook.css';
-
 import { ThemeProvider } from '../src/helpers/theme';
 
 export const parameters = {

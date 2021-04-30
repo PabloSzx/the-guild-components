@@ -38,6 +38,10 @@ export interface IHeaderModalProps {
   onCancelModal: (state?: boolean) => void
 }
 
+export interface IFooterProps {
+  sameSite?: boolean
+}
+
 export interface IModalProps {
   title: string
   visible: boolean

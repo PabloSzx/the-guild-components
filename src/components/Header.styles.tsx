@@ -17,7 +17,7 @@ export const HeaderWrapper = styled.header(() => [
 ]);
 
 export const HeaderContainer = styled.div(() => [
-  tw`box-border container flex justify-between items-center px-0`
+  tw`container-max flex justify-between items-center px-0`
 ]);
 
 export const HeaderNav = styled.nav(({ isModalOpen }: IStyleProps) => [
@@ -26,7 +26,7 @@ export const HeaderNav = styled.nav(({ isModalOpen }: IStyleProps) => [
   tw`md:(static flex-row justify-end items-center transition-none)`,
   css`
     z-index: 300; //TODO: Used for Docusaurus, remove when no longer needed.
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       ${[
       tw`inset-0`,
       !isModalOpen && css`top: -100vh; bottom: 100vh;`

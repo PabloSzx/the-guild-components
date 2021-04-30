@@ -9,7 +9,9 @@ import {
   Wrapper,
 } from './Footer.styles';
 
-import logoImage from '../static/logos/guild-mono-dark.svg';
+import { ThemeContext } from '../helpers/theme';
+import { footerThemedAssets } from '../helpers/assets';
+import { IFooterProps } from './types';
 
 const links = [{
   label: 'Twitter',
@@ -29,25 +31,39 @@ const links = [{
   href: 'https://medium.com/the-guild',
 }]
 
-export const Footer: React.FC = () => (
-  <Wrapper>
-    <Container>
-      <Line />
-      <Copyright>
-        Belong anywhere. © The Guild, Inc.
-      </Copyright>
-      <Logo src={logoImage} alt="The Guild" />
-      <Links>
-        {links.map(link => (
-          <li key={link.label}>
-            <a href={link.href} title={link.title} target="_blank" rel="noopener noreferrer">
-              {link.label}
-            </a>
-          </li>
-        ))}
-      </Links>
-    </Container>
-  </Wrapper>
-)
+export const Footer: React.FC<IFooterProps> = ({ sameSite }) => {
+  const { isDarkTheme } = React.useContext(ThemeContext);
+  const footerAssets = footerThemedAssets(isDarkTheme || false);
 
+  const logoOptions = sameSite ? {
+    href: '/'
+  } : {
+    href: 'https://the-guild.dev',
+    rel: 'noopener noreferrer',
+    target: '_blank'
+  }
+
+  return (
+    <Wrapper>
+      <Container>
+        <Line />
+        <Copyright>
+          Belong anywhere. © The Guild, Inc.
+      </Copyright>
+        <Logo {...logoOptions}>
+          <img src={footerAssets.logo} alt="The Guild" />
+        </Logo>
+        <Links>
+          {links.map(link => (
+            <li key={link.label}>
+              <a href={link.href} title={link.title} target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </Links>
+      </Container>
+    </Wrapper>
+  )
+}
 

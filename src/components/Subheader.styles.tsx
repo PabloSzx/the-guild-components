@@ -17,7 +17,7 @@ export const Wrapper = styled.header(() => [
 ]);
 
 export const Container = styled.div(() => [
-  tw`box-border container flex justify-between md:justify-end items-center px-0`,
+  tw`container-max flex justify-between md:justify-end items-center px-0`,
 ]);
 
 export const Navigation = styled.nav(({ isModalOpen }: IStyleProps) => [
@@ -26,7 +26,7 @@ export const Navigation = styled.nav(({ isModalOpen }: IStyleProps) => [
   tw`md:(static flex-row flex-1 justify-end items-center transition-none)`,
   css`
     z-index: 300; //TODO: Used for Docusaurus, remove when no longer needed.
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       ${[
       tw`inset-0`,
       !isModalOpen && css`top: -100vh; bottom: 100vh;`
@@ -58,7 +58,7 @@ export const Logo = styled.a(() => [
 ]);
 
 export const Link = styled.a(({ isActiveLink }: IStyleProps) => [
-  tw`w-max mx-auto py-3 font-medium text-base text-center no-underline! hover:opacity-70`,
+  tw`w-max mx-auto py-3 font-medium text-base text-center no-underline! hover:text-black`,
   tw`sm:(text-lg py-5)`,
   tw`md:(mx-2.5 last:mr-5 py-0 text-xs text-left)`,
   tw`transition duration-200 ease-in-out`,

@@ -2,6 +2,7 @@ import React from 'react';
 
 import {
   Container,
+  Content,
   CTA,
   Image,
   Info,
@@ -20,20 +21,21 @@ export const HeroGradient: React.FC<IHeroGradientProps> = ({ title, description,
         <span></span>
         <span></span>
       </Gradient>
-
-      <Info>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </Info>
-      <CTA>
-        {link && (
-          <a href={link.href} title={link.title}>
-            {link.label}
-          </a>
-        )}
-        {version && <span>{version}</span>}
-      </CTA>
-      <Image src={image.src} alt={image.alt} />
+      <Content>
+        <Info>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </Info>
+        <CTA>
+          {link && (
+            <a href={link.href} title={link.title}>
+              {link.label}
+            </a>
+          )}
+          {version && <span>{version}</span>}
+        </CTA>
+        <Image src={image.src} alt={image.alt} />
+      </Content>
     </Container>
   </Wrapper>
 );

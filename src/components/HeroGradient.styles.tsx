@@ -5,12 +5,15 @@ interface IStyleProps {
 }
 
 export const Wrapper = styled.section(() => [
-  tw`font-sans text-white overflow-hidden md:(pt-16)`
+  tw`font-sans text-white overflow-hidden md:pt-14`
 ]);
 
 export const Container = styled.div(() => [
-  tw`box-border relative container mb-32 pt-8 pb-72`,
-  tw`md:(mb-4 px-10 pt-24 pb-14)`
+  tw`container-min relative`,
+]);
+
+export const Content = styled.div(() => [
+  tw`mb-32 pt-8 pb-72 md:(mb-4 px-10 pt-24 pb-14)`,
 ]);
 
 export const CTA = styled.div(() => [
@@ -30,7 +33,7 @@ export const CTA = styled.div(() => [
 ]);
 
 export const Image = styled.img(() => [
-  tw`absolute w-full max-w-sm -bottom-36 -right-4 sm:(max-w-md) md:(-top-14 -right-20)`,
+  tw`absolute w-full max-w-sm -bottom-36 -right-4 sm:(max-w-md) md:(-top-14 -right-16)`,
 ]);
 
 export const Info = styled.div(() => [
@@ -54,7 +57,7 @@ export const Info = styled.div(() => [
 ]);
 
 export const Gradient = styled.div(({ colors }: IStyleProps) => [
-  tw`absolute inset-0 bg-black md:rounded-3xl overflow-hidden`,
+  tw`absolute inset-0 bg-black md:rounded-3xl md:mx-6 overflow-hidden`,
   css`
     span {
       ${[
@@ -63,7 +66,7 @@ export const Gradient = styled.div(({ colors }: IStyleProps) => [
         height: 500px;
         width: 500px;
         border-radius: 500px;
-        filter: blur(75px);
+        filter: blur(60px);
       `,
     ]}
 
@@ -91,7 +94,7 @@ export const Gradient = styled.div(({ colors }: IStyleProps) => [
       &:nth-child(3) {
         right: -350px;
         bottom: -500px;
-        filter: blur(90px);
+        filter: blur(70px);
       }
 
       &:nth-child(4) {

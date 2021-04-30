@@ -9,24 +9,24 @@ export const Wrapper = styled.section(() => [
 ])
 
 export const Container = styled.div(({ flipped }: IStyleProps) => [
-  tw`box-border container flex flex-wrap items-center py-8`,
-  tw`lg:(flex-nowrap justify-center)`,
-  flipped && tw`lg:flex-row-reverse`
+  tw`container-min flex flex-wrap items-center py-8`,
+  tw`md:(flex-nowrap justify-between)`,
+  flipped && tw`md:flex-row-reverse`
 ]);
 
 export const Illustration = styled.div(({ flipped }: IStyleProps) => [
   tw`flex h-auto w-full mb-6 bg-white`,
-  tw`lg:(h-96 w-2/5 mb-0)`,
+  tw`md:(h-96 w-2/5 mb-0)`,
   css`
     img {
-      ${tw`w-full max-w-xl`}
+      ${tw`w-full max-w-md`}
     }
   `,
-  flipped ? tw`lg:ml-8` : tw`lg:mr-8`
+  flipped ? tw`md:ml-8` : tw`md:mr-8`
 ]);
 
 export const Info = styled.div(() => [
-  tw`mb-6 lg:mb-0`,
+  tw`mb-6 md:mb-0`,
   css`
     h2 {
       ${tw`max-w-sm m-0 font-bold text-2xl md:text-3xl`}

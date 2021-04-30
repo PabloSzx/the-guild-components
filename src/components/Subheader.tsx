@@ -30,7 +30,13 @@ export const Subheader: React.FC<ISubheaderProps> = ({ product, activeLink, link
     setMobileNavOpen(state);
   }
 
-  links.map(link => link.active = activeLink.includes(link.href));
+  links.map(link => {
+    if (link.href === '/') {
+      link.active = activeLink === link.href;
+    } else {
+      link.active = activeLink.includes(link.href);
+    }
+  });
 
   const renderNavigation = (
     <Navigation isModalOpen={mobileNavOpen}>

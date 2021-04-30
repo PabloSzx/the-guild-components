@@ -2,6 +2,7 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { GlobalStyles } from '../../helpers/styles';
 
+import { CardsColorful } from '../CardsColorful';
 import { Footer } from '../Footer';
 import { FeatureList } from '../FeatureList';
 import { Header } from '../Header';
@@ -12,6 +13,7 @@ import { InfoList } from '../InfoList';
 import { Subheader } from '../Subheader';
 
 import {
+  dummyCardsColorful,
   dummyFeatureList,
   dummyHeroGradient,
   dummyHeroIllustration,
@@ -34,20 +36,27 @@ export default {
 
 const Template: Story = ({ page }) => {
   const pages: any = {
-    'home': (<>
-      <HeroGradient {...dummyHeroGradient} />
-      <FeatureList {...dummyFeatureList} />
-      <HeroVideo {...dummyHeroVideo} />
-      <HeroIllustration {...dummyHeroIllustration} />
-      <InfoList {...dummyInfoList} />
-    </>)
+    '/': (
+      <>
+        <HeroGradient {...dummyHeroGradient} />
+        <FeatureList {...dummyFeatureList} />
+        <HeroVideo {...dummyHeroVideo} />
+        <HeroIllustration {...dummyHeroIllustration} />
+        <InfoList {...dummyInfoList} />
+      </>
+    ),
+    '/marketplace': (
+      <>
+        <CardsColorful {...dummyCardsColorful} />
+      </>
+    )
   }
 
   return (
     <>
       <GlobalStyles />
       <Header accentColor="#ED2E7E" activeLink="/open-source" />
-      <Subheader {...dummySubheader} />
+      <Subheader {...dummySubheader} activeLink={page} />
       {pages[page]}
       <Footer />
     </>
@@ -57,5 +66,11 @@ const Template: Story = ({ page }) => {
 export const Home = Template.bind({})
 
 Home.args = {
-  page: 'home'
+  page: '/'
+}
+
+export const Marketplace = Template.bind({})
+
+Marketplace.args = {
+  page: '/marketplace'
 }

@@ -147,3 +147,25 @@ export const dummySubheader = {
     href: '/get-started'
   },
 };
+
+export const dummyCardsColorful = {
+  cards: [{
+    title: 'GraphQL Modules',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category: 'New release by the guild',
+    link: {
+      title: 'Learn more',
+      href: '/'
+    },
+    color: '#3547E5'
+  }, {
+    title: 'Clean up your code!',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    category: 'Pro tip',
+    link: {
+      title: 'Learn more',
+      href: '/'
+    },
+    color: '#0B0D11'
+  }]
+}

@@ -1,8 +1,8 @@
 interface ILink {
-  label: string
-  title: string
-  href: string
   active?: boolean
+  href: string
+  label?: string
+  title: string
 }
 
 interface IImage {
@@ -92,4 +92,14 @@ export interface IHeroGradientProps {
   version?: string
   link?: ILink
   image: IImage
+}
+
+export interface ICardsColorfulProps {
+  cards: {
+    title: string
+    description: string
+    category: string
+    color: string
+    link: ILink
+  }[]
 }

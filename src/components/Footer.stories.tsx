@@ -1,5 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
+import { IFooterProps } from './types';
 
 import { Footer } from './Footer';
 
@@ -19,7 +20,7 @@ export default {
   }
 } as Meta
 
-const Template: Story = args => (
+const Template: Story<IFooterProps> = args => (
   <Footer {...args} />
 )
 

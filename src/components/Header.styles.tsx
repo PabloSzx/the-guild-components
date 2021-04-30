@@ -7,7 +7,7 @@ interface IStyleProps {
 }
 
 export const HeaderWrapper = styled.header(() => [
-  tw`px-6 py-2 md:py-5 font-sans`,
+  tw`py-2 md:py-5 font-sans`,
   tw`dark:bg-gray-900 bg-white`,
   css`
     button:focus:not(:focus-visible) {
@@ -17,7 +17,7 @@ export const HeaderWrapper = styled.header(() => [
 ]);
 
 export const HeaderContainer = styled.div(() => [
-  tw`container-max flex justify-between items-center px-0`
+  tw`container-max flex justify-between`
 ]);
 
 export const HeaderNav = styled.nav(({ isModalOpen }: IStyleProps) => [

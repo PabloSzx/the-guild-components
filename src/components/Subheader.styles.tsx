@@ -7,7 +7,7 @@ interface IStyleProps {
 }
 
 export const Wrapper = styled.header(() => [
-  tw`sticky top-0 z-10 px-6 py-5 bg-white font-sans`,
+  tw`sticky top-0 z-10 py-5 bg-white font-sans`,
   css`
     box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.04);
     button:focus:not(:focus-visible) {
@@ -17,7 +17,7 @@ export const Wrapper = styled.header(() => [
 ]);
 
 export const Container = styled.div(() => [
-  tw`container-max flex justify-between md:justify-end items-center px-0`,
+  tw`container-max flex justify-between md:justify-end`,
 ]);
 
 export const Navigation = styled.nav(({ isModalOpen }: IStyleProps) => [

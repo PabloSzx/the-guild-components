@@ -35,21 +35,22 @@ module.exports = {
         paddingRight: '1.5rem',
         marginLeft: 'auto',
         marginRight: 'auto',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
       }
 
       const newUtilities = {
         '.container-max': {
           ...containerProps,
-          maxWidth: '1200px'
+          maxWidth: '1200px',
         },
         
         '.container-min': {
           ...containerProps,
-          maxWidth: '1024px'
+          maxWidth: '1024px',
         },
       }
-      addUtilities(newUtilities)
+
+      addUtilities(newUtilities);
     })
   ]
 }

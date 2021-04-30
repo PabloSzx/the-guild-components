@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { GlobalStyles } from '../../helpers/styles';
 import { ThemeProvider } from '../../helpers/theme';
@@ -22,22 +22,34 @@ import {
 } from '../../helpers/dummy';
 
 export default {
-  title: 'Design System/Pages/Envelop',
+  title: 'Design System/Projects/Envelop',
   argTypes: {},
 } as Meta
 
-const Template: Story = () => (
-  <ThemeProvider>
-    <GlobalStyles />
-    <Header accentColor="#ED2E7E" activeLink="/open-source" />
-    <Subheader {...dummySubheader} />
-    <HeroGradient {...dummyHeroGradient} />
-    <FeatureList {...dummyFeatureList} />
-    <HeroVideo {...dummyHeroVideo} />
-    <HeroIllustration {...dummyHeroIllustration} />
-    <InfoList {...dummyInfoList} />
-    <Footer />
-  </ThemeProvider>
-)
+const Template: Story = ({ page }) => {
+  const pages: any = {
+    'home': (<>
+      <HeroGradient {...dummyHeroGradient} />
+      <FeatureList {...dummyFeatureList} />
+      <HeroVideo {...dummyHeroVideo} />
+      <HeroIllustration {...dummyHeroIllustration} />
+      <InfoList {...dummyInfoList} />
+    </>)
+  }
 
-export const Default = Template.bind({})
+  return (
+    <ThemeProvider>
+      <GlobalStyles />
+      <Header accentColor="#ED2E7E" activeLink="/open-source" />
+      <Subheader {...dummySubheader} />
+      {pages[page]}
+      <Footer />
+    </ThemeProvider>
+  )
+}
+
+export const Home = Template.bind({})
+
+Home.args = {
+  page: 'home'
+}

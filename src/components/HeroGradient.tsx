@@ -10,7 +10,7 @@ import {
   Gradient
 } from './HeroGradient.styles';
 
-import { IHeroGradientProps } from './types';
+import { IHeroGradientProps } from '../helpers/types';
 
 export const HeroGradient: React.FC<IHeroGradientProps> = ({ title, description, link, version, colors, image }) => (
   <Wrapper>

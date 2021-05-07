@@ -8,7 +8,7 @@ import {
   Wrapper,
 } from './FeatureList.styles';
 
-import { IFeatureListProps } from './types';
+import { IFeatureListProps } from '../helpers/types';
 
 export const FeatureList: React.FC<IFeatureListProps> = ({ title, items }) => (
   <Wrapper>

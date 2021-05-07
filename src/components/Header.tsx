@@ -14,7 +14,7 @@ import {
   HeaderLogo
 } from './Header.styles';
 
-import { IHeaderProps } from './types';
+import { IHeaderProps } from '../helpers/types';
 import { ThemeContext } from '../helpers/theme';
 import { headerThemedIcons } from '../helpers/assets';
 import { toggleLockBodyScroll } from '../helpers/modals';

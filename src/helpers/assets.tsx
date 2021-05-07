@@ -80,3 +80,7 @@ export const modalThemedIcons = (isDark: boolean) => ({
 export const footerThemedAssets = (isDark: boolean) => ({
   logo: isDark ? logoMonoLight : logoMonoDark,
 })
+
+export const marketplaceThemedAssets = (isDark: boolean) => ({
+  caret: isDark ? caretSlimIconLight : caretSlimIconDark,
+})

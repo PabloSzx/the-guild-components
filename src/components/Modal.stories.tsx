@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IModalProps } from './types';
+import { IModalProps } from '../helpers/types';
 
 import { Modal } from './Modal';
 

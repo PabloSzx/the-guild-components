@@ -4,9 +4,10 @@ import featureListImage3 from '../static/icons/features/envelop-modern.png';
 import heroIllustrationImage from '../static/illustrations/envelop-communication.png';
 import heroGradientImage from '../static/illustrations/envelop-hero.png';
 import subheaderImage from '../static/logos/products/envelop.svg';
+import marketplaceListImage from '../static/logos/marketplace/modules.svg';
 
 export const dummyFeatureList = {
-  title: "The best and simple features",
+  title: 'The best and simple features',
   items: [{
     image: {
       alt: 'Toy Brick Icon',
@@ -32,7 +33,7 @@ export const dummyFeatureList = {
 };
 
 export const dummyInfoList = {
-  title: "Get Started",
+  title: 'Get Started',
   items: [{
     title: 'Install GraphQL Envelop',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas euismod amet duis quisque semper.',
@@ -61,7 +62,7 @@ export const dummyInfoList = {
 };
 
 export const dummyHeroVideo = {
-  title: "Easy Installation",
+  title: 'Easy Installation',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc scelerisque mauris imperdiet nulla vehicula, vitae porttitor massa consequat. Proin semper bibendum aliquam.',
   link: {
     label: 'Documentation',
@@ -75,7 +76,7 @@ export const dummyHeroVideo = {
 };
 
 export const dummyHeroIllustration = {
-  title: "Direct communication with your server",
+  title: 'Direct communication with your server',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc scelerisque mauris imperdiet nulla vehicula, vitae porttitor massa consequat. Proin semper bibendum aliquam.',
   link: {
     label: 'Documentation',
@@ -90,7 +91,7 @@ export const dummyHeroIllustration = {
 };
 
 export const dummyHeroGradient = {
-  title: "A GraphQL server framework for improved developer experience",
+  title: 'A GraphQL server framework for improved developer experience',
   description: 'Use any Node framework and any GraphQL feature, with the easiest plugins system - A new framework by The Guild',
   link: {
     label: 'Get started',
@@ -98,7 +99,7 @@ export const dummyHeroGradient = {
     href: '/get-started'
   },
   version: '1.0.7',
-  colors: ['#FF34AE', "#1CC8EE"],
+  colors: ['#FF34AE', '#1CC8EE'],
   image: {
     src: heroGradientImage,
     alt: 'Illustration'
@@ -169,3 +170,37 @@ export const dummyCardsColorful = {
     color: '#0B0D11'
   }]
 }
+
+export const dummyMarketplaceList = {
+  title: 'Trending & Last Update',
+  placeholder: 'There are no items available...',
+  items: [{
+    title: 'GraphQL Modules',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: 'Lipsum 1',
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Jit',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: 'Lipsum 2',
+    update: '2021-02-01T10:14:55.884Z',
+    stars: 276,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Jit Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }]
+};

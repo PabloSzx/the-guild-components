@@ -7,7 +7,7 @@ import {
   Wrapper,
 } from './HeroIllustration.styles';
 
-import { IHeroIllustrationProps } from './types';
+import { IHeroIllustrationProps } from '../helpers/types';
 
 export const HeroIllustration: React.FC<IHeroIllustrationProps> = ({ title, description, link, image, flipped }) => (
   <Wrapper>

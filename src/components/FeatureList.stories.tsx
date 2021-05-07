@@ -1,12 +1,12 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IFeatureListProps } from './types';
+import { IFeatureListProps } from '../helpers/types';
 import { dummyFeatureList } from '../helpers/dummy';
 
 import { FeatureList } from './FeatureList';
 
 export default {
-  title: 'Components/List/Feature List',
+  title: 'Components/List/Features',
   component: FeatureList,
   argTypes: {
     title: {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IFooterProps } from './types';
+import { IFooterProps } from '../helpers/types';
 
 import { Footer } from './Footer';
 

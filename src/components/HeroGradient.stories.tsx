@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IHeroGradientProps } from './types';
+import { IHeroGradientProps } from '../helpers/types';
 import { dummyHeroGradient } from '../helpers/dummy';
 
 import { HeroGradient } from './HeroGradient';

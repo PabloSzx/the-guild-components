@@ -8,7 +8,7 @@ import {
   Wrapper
 } from './InfoList.styles';
 
-import { IInfoListProps } from './types';
+import { IInfoListProps } from '../helpers/types';
 
 export const InfoList: React.FC<IInfoListProps> = ({ title, items }) => (
   <Wrapper>

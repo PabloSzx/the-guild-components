@@ -1,12 +1,12 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IInfoListProps } from './types';
+import { IInfoListProps } from '../helpers/types';
 import { dummyInfoList } from '../helpers/dummy';
 
 import { InfoList } from './InfoList';
 
 export default {
-  title: 'Components/List/Info List',
+  title: 'Components/List/Text Info',
   component: InfoList,
   argTypes: {
     title: {

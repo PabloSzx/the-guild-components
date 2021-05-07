@@ -9,7 +9,7 @@ import {
   ModalClose
 } from './Modal.styles';
 
-import { IModalProps } from './types';
+import { IModalProps } from '../helpers/types';
 import { modalThemedIcons } from '../helpers/assets';
 import { ThemeContext } from '../helpers/theme';
 import { useKeyPress } from '../helpers/hooks';

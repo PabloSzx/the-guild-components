@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IHeaderModalProps } from './types';
+import { IHeaderModalProps } from '../helpers/types';
 
 import { HeaderModal } from './HeaderModal';
 

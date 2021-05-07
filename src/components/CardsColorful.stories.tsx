@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { ICardsColorfulProps } from './types';
+import { ICardsColorfulProps } from '../helpers/types';
 import { dummyCardsColorful } from '../helpers/dummy';
 
 import { CardsColorful } from './CardsColorful';

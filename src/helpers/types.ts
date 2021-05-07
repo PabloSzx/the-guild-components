@@ -103,3 +103,17 @@ export interface ICardsColorfulProps {
     link: ILink
   }[]
 }
+
+export interface IMarketplaceListProps {
+  title: string
+  placeholder: string
+  items: {
+    title: string
+    description: string
+    modal: string
+    update: string
+    stars: number
+    image: IImage
+    link: ILink
+  }[]
+}

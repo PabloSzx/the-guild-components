@@ -11,7 +11,7 @@ import {
   Wrapper,
 } from './Subheader.styles';
 
-import { ISubheaderProps } from './types';
+import { ISubheaderProps } from '../helpers/types';
 import { ThemeContext } from '../helpers/theme';
 import { useWindowSize } from '../helpers/hooks';
 import { headerThemedIcons } from '../helpers/assets';

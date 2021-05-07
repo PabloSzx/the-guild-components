@@ -15,9 +15,10 @@ export const Container = styled.div(() => [
 
 export const Card = styled.a(({ color }: IStyleProps) => [
   tw`relative w-full p-8 rounded-3xl text-white no-underline`,
-  tw`md:(h-64 w-1/2 hover:(transform scale-105 shadow-xl))`,
+  tw`md:(h-72 w-1/2 hover:(transform scale-105 shadow-xl))`,
   tw`transition duration-200 ease-in-out`,
   css`
+    min-height: 200px;
     background-color: ${color || 'black'};
 
     &:after {

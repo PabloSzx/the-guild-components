@@ -24,7 +24,7 @@ import {
   SearchBarHit,
 } from './SearchBar.styles';
 
-import { ISearchBarProps } from './types';
+import { ISearchBarProps } from '../helpers/types';
 import { searchBarThemedIcons } from '../helpers/assets';
 import { toggleLockBodyScroll } from '../helpers/modals';
 import { ThemeContext } from '../helpers/theme';

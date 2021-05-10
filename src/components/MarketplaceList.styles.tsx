@@ -2,15 +2,15 @@
 import tw, { css, styled } from 'twin.macro';
 
 export const Wrapper = styled.section(() => [
-  tw`bg-white font-sans`,
+  tw`w-full bg-white font-sans`,
 ]);
 
 export const Container = styled.div(() => [
-  tw`container-min py-12`,
+  tw`container-max py-6`,
 ]);
 
 export const Title = styled.h2(() => [
-  tw`mt-0 mb-4 font-bold text-2xl md:text-3xl`,
+  tw`mt-0 mb-4 font-bold text-xl md:text-2xl`,
 ]);
 
 export const Placeholder = styled.div(() => [
@@ -21,7 +21,7 @@ export const Table = styled.table(() => [
   tw`w-full border-collapse`,
 ]);
 
-export const TableHeading = styled.thead(() => [
+export const TableHeader = styled.thead(() => [
   css`
     th {
       ${tw`px-2 font-semibold text-left text-xs text-gray-300 uppercase whitespace-nowrap`}
@@ -31,11 +31,42 @@ export const TableHeading = styled.thead(() => [
 
 export const TableBody = styled.tbody(() => []);
 
+export const TablePagination = styled.div(() => [
+  css`
+    ${tw`flex justify-center w-full`}
+
+    ul {
+      ${tw`flex list-none`}
+    }
+
+    li {
+      ${[
+      tw`inline-block mx-1 text-sm bg-gray-200 rounded-lg select-none`,
+      tw`hover:opacity-70 transition duration-200 ease-in-out`
+    ]}
+
+      &.selected {
+        ${tw`text-white bg-black`}
+      }
+
+      &.next,
+      &.previous {
+        ${tw`hidden`}
+      }
+    }
+
+    a {
+      ${tw`flex items-center justify-center h-8 w-8 cursor-pointer`}
+    }
+  `
+]);
+
 export const TableItem = styled.tr(() => [
-  tw`font-medium text-xs text-gray-500 border-0 border-b border-solid border-gray-300`,
+  tw`font-medium text-xs text-gray-500 border-0 border-b border-solid border-gray-300 last:border-0`,
   css`
     td {
       ${tw`px-2`}
+
       &:nth-child(2),
       &:nth-child(3) {
         ${tw`whitespace-nowrap`}
@@ -46,11 +77,11 @@ export const TableItem = styled.tr(() => [
       }
 
       img {
-        ${tw`my-4 mr-4`}
+        ${tw`m-4 ml-0 select-none`}
       }
 
       h3 {
-        ${tw`m-0 text-lg text-black`}
+        ${tw`m-0 font-bold text-lg text-black`}
       }
 
       p {
@@ -59,8 +90,8 @@ export const TableItem = styled.tr(() => [
 
       button {
         ${[
-      tw`flex justify-center items-center h-11 w-11 font-sans text-2xl text-gray-800 bg-gray-200 border-0 rounded-lg cursor-pointer`,
-      tw`hover:opacity-50 transition duration-300 ease-in-out`,
+      tw`flex justify-center items-center h-10 w-10 bg-gray-200 border-0 rounded-lg cursor-pointer outline-none`,
+      tw`hocus:opacity-50 transition duration-200 ease-in-out`,
     ]}
 
         img {
@@ -69,4 +100,8 @@ export const TableItem = styled.tr(() => [
       }
     }
   `
+]);
+
+export const TableItemInfo = styled.div(() => [
+  tw`flex items-center`
 ]);

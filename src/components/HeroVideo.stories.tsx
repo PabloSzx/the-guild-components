@@ -6,7 +6,7 @@ import { dummyHeroVideo } from '../helpers/dummy';
 import { HeroVideo } from './HeroVideo';
 
 export default {
-  title: 'Components/Hero/Video',
+  title: 'Components/Heroes/Video',
   component: HeroVideo,
   argTypes: {
     title: {
@@ -19,7 +19,7 @@ export default {
       name: 'Video'
     },
     flipped: {
-      name: 'Flip orientation'
+      name: 'Flip Orientation'
     },
     link: {
       name: 'Link'

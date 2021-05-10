@@ -22,6 +22,11 @@ module.exports = {
       width: {
         '4.5': '1.125rem',
       },
+      maxWidth: {
+        '1/4': '25%',
+        '2/4': '50%',
+        '3/4': '75%',
+      },
       borderWidth: {
         '3': '3px',
       },

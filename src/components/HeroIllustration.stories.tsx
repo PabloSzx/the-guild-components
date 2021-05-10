@@ -6,7 +6,7 @@ import { dummyHeroIllustration } from '../helpers/dummy';
 import { HeroIllustration } from './HeroIllustration';
 
 export default {
-  title: 'Components/Hero/Illustration',
+  title: 'Components/Heroes/Illustration',
   component: HeroIllustration,
   argTypes: {
     title: {
@@ -19,7 +19,7 @@ export default {
       name: 'Illustration'
     },
     flipped: {
-      name: 'Flip orientation'
+      name: 'Flip Orientation'
     },
     link: {
       name: 'Link'

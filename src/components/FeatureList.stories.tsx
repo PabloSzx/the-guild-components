@@ -6,7 +6,7 @@ import { dummyFeatureList } from '../helpers/dummy';
 import { FeatureList } from './FeatureList';
 
 export default {
-  title: 'Components/List/Features',
+  title: 'Components/Lists/Features',
   component: FeatureList,
   argTypes: {
     title: {

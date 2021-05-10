@@ -54,9 +54,9 @@ export const SearchBarForm = styled.div(({ accentColor }: IStyleProps) => [
         &::-webkit-search-cancel-button,
         &::-webkit-search-results-button,
         &::-webkit-search-results-decoration {
-            -webkit-appearance:none;
-          }
-        `
+          -webkit-appearance:none;
+        }
+      `
     ]}
     }
 

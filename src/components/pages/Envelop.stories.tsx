@@ -10,6 +10,7 @@ import { HeroIllustration } from '../HeroIllustration';
 import { HeroGradient } from '../HeroGradient';
 import { HeroVideo } from '../HeroVideo';
 import { InfoList } from '../InfoList';
+import { MarketplaceSearch } from '../MarketplaceSearch';
 import { Subheader } from '../Subheader';
 
 import {
@@ -19,6 +20,7 @@ import {
   dummyHeroIllustration,
   dummyHeroVideo,
   dummyInfoList,
+  dummyMarketplaceSearch,
   dummySubheader
 } from '../../helpers/dummy';
 
@@ -48,6 +50,7 @@ const Template: Story = ({ page }) => {
     '/marketplace': (
       <>
         <CardsColorful {...dummyCardsColorful} />
+        <MarketplaceSearch {...dummyMarketplaceSearch} />
       </>
     )
   }

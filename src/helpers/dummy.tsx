@@ -171,13 +171,32 @@ export const dummyCardsColorful = {
   }]
 }
 
+export const dummyMarketplaceSearch = {
+  title: 'Explore Marketplace',
+  placeholder: 'Search...'
+}
+
 export const dummyMarketplaceList = {
   title: 'Trending & Last Update',
   placeholder: 'There are no items available...',
+  pagination: 4,
   items: [{
-    title: 'GraphQL Modules',
+    title: 'GraphQL Modules 1',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    modal: 'Lipsum 1',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 1',
+    },
     update: '2021-05-07T10:14:55.884Z',
     stars: 10394,
     image: {
@@ -189,14 +208,243 @@ export const dummyMarketplaceList = {
       href: '/'
     },
   }, {
-    title: 'GraphQL Jit',
+    title: 'GraphQL Modules 2',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    modal: 'Lipsum 2',
-    update: '2021-02-01T10:14:55.884Z',
-    stars: 276,
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 2',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
     image: {
       src: marketplaceListImage,
-      alt: 'GraphQL Jit Logo'
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Modules 3',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 3',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Modules 4',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 4',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Modules 5',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 5',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Modules 6',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 6',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Modules 7',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 7',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Modules 8',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 8',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Modules 9',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 9',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
+    },
+    link: {
+      title: 'Learn more about GraphQL Jit',
+      href: '/'
+    },
+  }, {
+    title: 'GraphQL Modules 10',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    modal: {
+      header: {
+        image: {
+          src: marketplaceListImage,
+          alt: 'GraphQL Jit Logo'
+        },
+        description: {
+          label: 'Apr 20, 2021 - Latest Update',
+          href: 'https://google.com',
+          title: 'Example Link Title',
+        },
+      },
+      content: 'Lipsum 10',
+    },
+    update: '2021-05-07T10:14:55.884Z',
+    stars: 10394,
+    image: {
+      src: marketplaceListImage,
+      alt: 'GraphQL Modules Logo'
     },
     link: {
       title: 'Learn more about GraphQL Jit',

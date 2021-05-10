@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 
 import {
-  ModalContainer,
-  ModalOverlay,
-  ModalWrapper,
-  ModalHeader,
-  ModalContent,
-  ModalClose
+  Body,
+  Container,
+  CloseButton,
+  Header,
+  HeaderImage,
+  HeaderInfo,
+  Overlay,
+  Wrapper,
 } from './Modal.styles';
 
 import { IModalProps } from '../helpers/types';
@@ -14,10 +16,28 @@ import { modalThemedIcons } from '../helpers/assets';
 import { ThemeContext } from '../helpers/theme';
 import { useKeyPress } from '../helpers/hooks';
 
-export const Modal: React.FC<IModalProps> = ({ title, children, visible, placement, onCancel }) => {
+export const Modal: React.FC<IModalProps> = ({ image, title, description, children, visible, placement, onCancel }) => {
   const { isDarkTheme } = React.useContext(ThemeContext);
   const escapePress = useKeyPress("Escape");
   const icons = modalThemedIcons(isDarkTheme || false);
+
+  const renderDescription = () => {
+    if (!description) {
+      return;
+    }
+
+    if (typeof description === 'object') {
+      return <a
+        href={description.href}
+        title={description.title}
+      >
+        <p>{description.label}</p>
+        <img src={icons.externalLink} height="15" width="15" alt="External" />
+      </a>
+    } else {
+      return <p>{description}</p>
+    }
+  }
 
   useEffect(() => {
     if (visible && escapePress) {
@@ -26,20 +46,24 @@ export const Modal: React.FC<IModalProps> = ({ title, children, visible, placeme
   }, [visible, escapePress]);
 
   return (
-    <ModalContainer isModalOpen={visible}>
-      <ModalOverlay isModalOpen={visible} onClick={() => onCancel()} tabIndex={-1} />
-      <ModalWrapper isModalOpen={visible} placement={placement}>
-        <ModalHeader>
-          <h2>{title}</h2>
-          <ModalClose onClick={() => onCancel()}>
-            <img src={icons.close} height="24" width="24" alt="Modal close icon" />
-          </ModalClose>
-        </ModalHeader>
-        <ModalContent>
+    <Container isModalOpen={visible}>
+      <Overlay isModalOpen={visible} onClick={() => onCancel()} tabIndex={-1} />
+      <Wrapper isModalOpen={visible} placement={placement}>
+        <Header>
+          {image && <HeaderImage src={image.src} alt={image.alt} />}
+          <HeaderInfo>
+            <h2>{title}</h2>
+            {renderDescription()}
+          </HeaderInfo>
+          <CloseButton onClick={() => onCancel()}>
+            <img src={icons.close} height="22" width="22" alt="Modal close icon" />
+          </CloseButton>
+        </Header>
+        <Body>
           {children}
-        </ModalContent>
-      </ModalWrapper>
-    </ModalContainer>
+        </Body>
+      </Wrapper>
+    </Container>
   );
 };
 

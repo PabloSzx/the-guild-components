@@ -6,7 +6,7 @@ import { dummyHeroGradient } from '../helpers/dummy';
 import { HeroGradient } from './HeroGradient';
 
 export default {
-  title: 'Components/Hero/Gradient',
+  title: 'Components/Heroes/Gradient',
   component: HeroGradient,
   argTypes: {
     title: {

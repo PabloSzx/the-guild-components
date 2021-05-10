@@ -6,7 +6,7 @@ import { dummySubheader } from '../helpers/dummy';
 import { Subheader } from './Subheader';
 
 export default {
-  title: 'Components/Subheader',
+  title: 'Components/Headers/Sub Header',
   component: Subheader,
   argTypes: {
     product: {

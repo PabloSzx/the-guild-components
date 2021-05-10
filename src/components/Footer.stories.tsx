@@ -5,7 +5,7 @@ import { IFooterProps } from '../helpers/types';
 import { Footer } from './Footer';
 
 export default {
-  title: 'Components/Footer',
+  title: 'Components/Footers',
   component: Footer,
   argTypes: {
     sameSite: {

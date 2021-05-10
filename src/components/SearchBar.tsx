@@ -109,7 +109,7 @@ export const SearchBar: React.FC<ISearchBarProps> = ({ accentColor, title, place
 
     const transformIcon = (item: Hit) => {
       if (item.anchor) {
-        return icons.anchor;
+        return icons.hashtag;
       } else if (item.content) {
         return icons.content;
       } else {

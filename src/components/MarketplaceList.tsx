@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import ReactPaginate from 'react-paginate';
 
 import { Modal } from './Modal';
 
@@ -8,22 +9,23 @@ import {
   Title,
   Table,
   TableBody,
-  TableHeading,
+  TableHeader,
   TableItem,
+  TableItemInfo,
+  TablePagination,
   Wrapper
 } from './MarketplaceList.styles';
 
-import { IMarketplaceListProps } from '../helpers/types';
+import {
+  IMarketplaceListProps,
+  IMarketplaceItemsProps,
+  IMarketplaceItemProps
+} from '../helpers/types';
 import { ThemeContext } from '../helpers/theme';
 import { marketplaceThemedAssets } from '../helpers/assets';
 import { toggleLockBodyScroll } from '../helpers/modals';
 
-export const MarketplaceList: React.FC<IMarketplaceListProps> = ({ title, placeholder, items }) => {
-  const { isDarkTheme } = React.useContext(ThemeContext);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentItem, setCurrentItem] = useState(items[0]);
-  const marketplaceAssets = marketplaceThemedAssets(isDarkTheme || false);
-
+const TableItems: React.FC<IMarketplaceItemsProps> = ({ icon, items, handleModal, setCurrentItem }) => {
   const formateDate = (value: string) => {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const date = new Date(value);
@@ -35,64 +37,116 @@ export const MarketplaceList: React.FC<IMarketplaceListProps> = ({ title, placeh
     return `${stars} k`;
   }
 
+  return (
+    <>
+      {
+        items && items.map(item => (
+          <TableItem key={item.title}>
+            <td>
+              <TableItemInfo>
+                <img src={item.image.src} alt={item.image.alt} />
+                <span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </span>
+              </TableItemInfo>
+            </td>
+            <td>{formateDate(item.update)}</td>
+            <td>{formatStars(item.stars)}</td>
+            <td>
+              <button type="button" onClick={() => {
+                handleModal(true);
+                setCurrentItem(item);
+              }}>
+                <img src={icon} alt=">" />
+              </button>
+            </td>
+          </TableItem>
+        ))
+      }
+    </>
+  )
+}
+
+export const MarketplaceList: React.FC<IMarketplaceListProps> = ({ title, placeholder, items, pagination }) => {
+  const { isDarkTheme } = React.useContext(ThemeContext);
+  const marketplaceAssets = marketplaceThemedAssets(isDarkTheme || false);
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [pages, setPages] = useState([[]]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [currentItem, setCurrentItem] = useState<IMarketplaceItemProps>();
+
+  const pageSize = pagination || 5;
+  const pageCount = items ? Math.ceil(items.length / pageSize) : 1;
+
   const handleModal = (state: boolean) => {
     !modalOpen && toggleLockBodyScroll(state);
     setModalOpen(state);
   }
 
+  useEffect(() => {
+    const itemsCopy = JSON.parse(JSON.stringify(items));
+    const pagesData = [];
+
+    while (itemsCopy.length) {
+      pagesData.push(itemsCopy.splice(0, pageSize));
+    }
+
+    setPages(pagesData);
+  }, [items]);
+
   return (
     <Wrapper>
       <Container>
-        <Title>{title}</Title>
-        {!items.length ? (
+        {title && <Title>{title}</Title>}
+        {!pages[currentPage] || !pages[currentPage].length ? (
           <Placeholder>
             {placeholder}
           </Placeholder>
         ) : (
           <>
             <Table>
-              <TableHeading>
+              <TableHeader>
                 <tr>
                   <th>Name</th>
                   <th>Last Update</th>
                   <th>Star</th>
                   <th></th>
                 </tr>
-              </TableHeading>
+              </TableHeader>
               <TableBody>
-                {items.map(item => (
-                  <TableItem key={item.title}>
-                    <td>
-                      <div>
-                        <img src={item.image.src} alt={item.image.alt} />
-                        <span>
-                          <h3>{item.title}</h3>
-                          <p>{item.description}</p>
-                        </span>
-                      </div>
-                    </td>
-                    <td>{formateDate(item.update)}</td>
-                    <td>{formatStars(item.stars)}</td>
-                    <td>
-                      <button type="button" onClick={() => {
-                        handleModal(true);
-                        setCurrentItem(item);
-                      }}>
-                        <img src={marketplaceAssets.caret} alt=">" />
-                      </button>
-                    </td>
-                  </TableItem>
-                ))}
+                <TableItems
+                  items={pages[currentPage]}
+                  icon={marketplaceAssets.caret}
+                  setCurrentItem={setCurrentItem}
+                  handleModal={handleModal}
+                />
               </TableBody>
             </Table>
-            <Modal
-              title={currentItem.title}
-              placement="bottom"
-              visible={modalOpen}
-              onCancel={() => handleModal(false)}
-            >
-              {currentItem.modal}
-            </Modal>
+
+            {pageCount > 1 && (
+              <TablePagination>
+                <ReactPaginate {...{
+                  pageCount: pageCount,
+                  pageRangeDisplayed: 3,
+                  marginPagesDisplayed: 1,
+                  onPageChange: (page) => setCurrentPage(page.selected),
+                }} />
+              </TablePagination>
+            )}
+
+            {currentItem && (
+              <Modal
+                {...currentItem.modal.header}
+                title={currentItem.title}
+                placement="bottom"
+                visible={modalOpen}
+                onCancel={() => handleModal(false)}
+              >
+                {currentItem.modal.content}
+              </Modal>
+            )}
           </>
         )}
       </Container>

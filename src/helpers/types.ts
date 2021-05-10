@@ -1,3 +1,5 @@
+import React from "react";
+
 interface ILink {
   active?: boolean
   href: string
@@ -44,6 +46,8 @@ export interface IFooterProps {
 
 export interface IModalProps {
   title: string
+  description?: string | ILink
+  image?: IImage
   visible: boolean
   placement: 'top' | 'center' | 'bottom'
   onCancel: (state?: boolean) => void
@@ -104,16 +108,37 @@ export interface ICardsColorfulProps {
   }[]
 }
 
+export interface IMarketplaceItemProps {
+  title: string
+  description: string
+  modal: {
+    header: {
+      image: IImage
+      description: string | ILink
+    }
+    content: string
+  }
+  update: string
+  stars: number
+  image: IImage
+  link: ILink
+}
+
+export interface IMarketplaceItemsProps {
+  icon: string 
+  items: IMarketplaceItemProps[] | null
+  setCurrentItem: (state: IMarketplaceItemProps) => void
+  handleModal: (state: boolean) => void
+}
+
 export interface IMarketplaceListProps {
+  title?: string
+  placeholder: string | React.ReactElement
+  pagination: number
+  items: IMarketplaceItemProps[] | null
+}
+
+export interface IMarketplaceSearchProps {
   title: string
   placeholder: string
-  items: {
-    title: string
-    description: string
-    modal: string
-    update: string
-    stars: number
-    image: IImage
-    link: ILink
-  }[]
 }

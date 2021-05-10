@@ -8,6 +8,8 @@ import caretSlimIconDark from '../static/icons/caret-down-slim-dark.svg';
 import caretSlimIconLight from '../static/icons/caret-down-slim-light.svg';
 import closeIconDark from '../static/icons/close-dark.svg';
 import closeIconLight from '../static/icons/close-light.svg';
+import externalLinkIconLight from '../static/icons/external-link-light.svg';
+import externalLinkIconDark from '../static/icons/external-link-dark.svg';
 
 import logoFullDark from '../static/logos/guild-full-dark.svg';
 import logoFullLight from '../static/logos/guild-full-light.svg';
@@ -34,8 +36,8 @@ import searchIconDark from '../static/icons/search-dark.svg';
 import searchIconLight from '../static/icons/search-light.svg';
 import pageIconDark from '../static/icons/page-dark.svg';
 import pageIconLight from '../static/icons/page-light.svg';
-import linkIconDark from '../static/icons/link-dark.svg';
-import linkIconLight from '../static/icons/link-light.svg';
+import hashtagIconDark from '../static/icons/hashtag-dark.svg';
+import hashtagIconLight from '../static/icons/hashtag-light.svg';
 
 export const headerThemedIcons = (isDark: boolean) => ({
   themeToggle: isDark ? moonIconLight : moonIconDark,
@@ -69,12 +71,13 @@ export const searchBarThemedIcons = (isDark: boolean) => ({
   search: isDark ? searchIconLight : searchIconDark,
   close: isDark ? closeIconLight : closeIconDark,
   page: isDark ? pageIconLight : pageIconDark,
-  anchor: isDark ? linkIconLight : linkIconDark,
+  hashtag: isDark ? hashtagIconLight : hashtagIconDark,
   content: isDark ? hamburgerIconLight : hamburgerIconDark,
 })
 
 export const modalThemedIcons = (isDark: boolean) => ({
   close: isDark ? closeIconLight : closeIconDark,
+  externalLink: isDark ? externalLinkIconLight : externalLinkIconDark,
 })
 
 export const footerThemedAssets = (isDark: boolean) => ({
@@ -83,4 +86,5 @@ export const footerThemedAssets = (isDark: boolean) => ({
 
 export const marketplaceThemedAssets = (isDark: boolean) => ({
   caret: isDark ? caretSlimIconLight : caretSlimIconDark,
+  search: isDark ? searchIconLight : searchIconDark,
 })

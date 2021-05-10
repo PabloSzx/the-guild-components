@@ -16,7 +16,7 @@ export default {
       }
     },
     placeholder: {
-      name: 'Placeholder',
+      name: 'Input Placeholder',
       description: 'Property displayed in component\'s input',
     },
     title: {

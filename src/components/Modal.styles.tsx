@@ -5,7 +5,7 @@ interface IStyleProps {
   placement?: 'top' | 'center' | 'bottom'
 }
 
-export const ModalContainer = styled.div(({ isModalOpen }: IStyleProps) => [
+export const Container = styled.div(({ isModalOpen }: IStyleProps) => [
   tw`fixed inset-0 visible font-sans`,
   css`
     z-index: 400; //TODO: Used for Docusaurus, remove when no longer needed.
@@ -19,7 +19,7 @@ export const ModalContainer = styled.div(({ isModalOpen }: IStyleProps) => [
   `
 ]);
 
-export const ModalOverlay = styled.div(({ isModalOpen }: IStyleProps) => [
+export const Overlay = styled.div(({ isModalOpen }: IStyleProps) => [
   tw`absolute inset-0`,
   tw`w-full h-full dark:bg-gray-500 bg-gray-900 invisible opacity-0`,
   tw`transition-all duration-200 ease-in-out`,
@@ -28,7 +28,7 @@ export const ModalOverlay = styled.div(({ isModalOpen }: IStyleProps) => [
   `
 ]);
 
-export const ModalWrapper = styled.div(({ isModalOpen, placement }: IStyleProps) => [
+export const Wrapper = styled.div(({ isModalOpen, placement }: IStyleProps) => [
   tw`absolute inset-0 flex flex-col opacity-100 transform-none h-full w-full max-w-none rounded-none`,
   tw`dark:bg-gray-900 bg-white`,
   tw`md:(transform -translate-x-1/2)`,
@@ -50,21 +50,47 @@ export const ModalWrapper = styled.div(({ isModalOpen, placement }: IStyleProps)
   ]
 ]);
 
-export const ModalHeader = styled.div(() => [
-  tw`px-6 py-7 border-solid border-0 border-b`,
+export const Header = styled.div(() => [
+  tw`flex items-center px-6 py-6 border-solid border-0 border-b`,
   tw`dark:border-gray-700 border-gray-200`,
+]);
+
+export const HeaderImage = styled.img(() => [
+  tw`w-10 mr-2 md:(w-16 mr-4)`,
+]);
+
+export const HeaderInfo = styled.div(() => [
+  tw`flex flex-col justify-center w-full`,
   css`
+    min-height: 2.25rem;
+
     h2 {
-      ${tw`m-0 font-semibold text-lg dark:text-gray-100 text-black`}
+      ${tw`m-0 font-semibold text-lg md:text-xl dark:text-gray-100 text-black`}
     }
 
-    button {
-      ${tw`block`}
+    a, p {
+      ${tw`max-w-3/4 m-0 text-xs dark:text-gray-100 text-gray-500`}
+    }
+
+    a {
+      ${tw`flex no-underline`}
+
+      p {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        ${tw`max-w-none`}
+      }
+
+      img {
+        ${tw`ml-1.5`}
+      }
     }
   `,
 ]);
 
-export const ModalContent = styled.div(() => [
+export const Body = styled.div(() => [
   tw`block p-6 overflow-y-auto`,
   tw`dark:text-gray-300 text-black`,
   css`
@@ -84,8 +110,8 @@ export const ModalContent = styled.div(() => [
   `
 ]);
 
-export const ModalClose = styled.button(() => [
-  tw`absolute top-6 right-6 flex md:hidden justify-center items-center p-1.5`,
-  tw`bg-transparent border-0 cursor-pointer hocus:opacity-70`,
+export const CloseButton = styled.button(() => [
+  tw`absolute top-6 right-6 flex justify-center items-center h-9 w-9 p-0`,
+  tw`dark:bg-gray-700 bg-gray-200 border-0 rounded-lg cursor-pointer outline-none hocus:opacity-70`,
   tw`transition duration-200 ease-in-out`,
 ]);

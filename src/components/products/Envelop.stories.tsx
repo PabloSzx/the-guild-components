@@ -12,6 +12,7 @@ import { HeroVideo } from '../HeroVideo';
 import { InfoList } from '../InfoList';
 import { MarketplaceSearch } from '../MarketplaceSearch';
 import { Subheader } from '../Subheader';
+import { Docs } from '../Docs';
 
 import {
   dummyCardsColorful,
@@ -57,7 +58,9 @@ const Template: Story = ({ page }) => {
       </>
     ),
     '/docs': (
-      <></>
+      <>
+        <Docs />
+      </>
     )
   }
 
@@ -82,7 +85,7 @@ Marketplace.args = {
   page: '/marketplace'
 }
 
-export const Docs = Template.bind({})
-Docs.args = {
+export const Documentation = Template.bind({})
+Documentation.args = {
   page: '/docs'
 }

@@ -149,3 +149,6 @@ export interface IMarketplaceSearchProps {
   title: string
   placeholder: string
 }
+
+export interface IDocsProps {
+}

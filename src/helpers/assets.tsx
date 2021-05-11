@@ -39,6 +39,9 @@ import pageIconLight from '../static/icons/page-light.svg';
 import hashtagIconDark from '../static/icons/hashtag-dark.svg';
 import hashtagIconLight from '../static/icons/hashtag-light.svg';
 
+import arrowIconDark from '../static/icons/arrow-dark.svg';
+import arrowIconLight from '../static/icons/arrow-light.svg';
+
 export const headerThemedIcons = (isDark: boolean) => ({
   themeToggle: isDark ? moonIconLight : moonIconDark,
   menu: isDark ? hamburgerIconLight : hamburgerIconDark,
@@ -87,4 +90,8 @@ export const footerThemedAssets = (isDark: boolean) => ({
 export const marketplaceThemedAssets = (isDark: boolean) => ({
   caret: isDark ? caretSlimIconLight : caretSlimIconDark,
   search: isDark ? searchIconLight : searchIconDark,
+})
+
+export const docsThemedAssets = (isDark: boolean) => ({
+  arrow: isDark ? arrowIconLight : arrowIconDark,
 })

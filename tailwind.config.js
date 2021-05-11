@@ -21,6 +21,7 @@ module.exports = {
       },
       width: {
         '4.5': '1.125rem',
+        'fit': 'fit-content'
       },
       maxWidth: {
         '1/4': '25%',

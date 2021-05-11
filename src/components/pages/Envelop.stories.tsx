@@ -18,11 +18,13 @@ import {
   dummyFeatureList,
   dummyHeroGradient,
   dummyHeroIllustration,
+  dummyHeroMarketplace,
   dummyHeroVideo,
   dummyInfoList,
   dummyMarketplaceSearch,
   dummySubheader
 } from '../../helpers/dummy';
+import { HeroMarketplace } from '../HeroMarketplace';
 
 export default {
   title: 'Products/Envelop',
@@ -44,6 +46,7 @@ const Template: Story = ({ page }) => {
         <FeatureList {...dummyFeatureList} />
         <HeroVideo {...dummyHeroVideo} />
         <HeroIllustration {...dummyHeroIllustration} />
+        <HeroMarketplace {...dummyHeroMarketplace} />
         <InfoList {...dummyInfoList} />
       </>
     ),
@@ -52,6 +55,9 @@ const Template: Story = ({ page }) => {
         <CardsColorful {...dummyCardsColorful} />
         <MarketplaceSearch {...dummyMarketplaceSearch} />
       </>
+    ),
+    '/docs': (
+      <></>
     )
   }
 
@@ -67,13 +73,16 @@ const Template: Story = ({ page }) => {
 }
 
 export const Home = Template.bind({})
-
 Home.args = {
   page: '/'
 }
 
 export const Marketplace = Template.bind({})
-
 Marketplace.args = {
   page: '/marketplace'
+}
+
+export const Docs = Template.bind({})
+Docs.args = {
+  page: '/docs'
 }

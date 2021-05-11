@@ -1,10 +1,11 @@
 import React from 'react';
+import ReactPlayer from 'react-player/lazy';
 
 import {
   Wrapper,
   Container,
   Info,
-  Video
+  Video,
 } from './HeroVideo.styles';
 
 import { IHeroVideoProps } from '../helpers/types';
@@ -18,7 +19,20 @@ export const HeroVideo: React.FC<IHeroVideoProps> = ({ title, description, link,
         {link && <a href={link.href} title={link.title}>{link.label}</a>}
       </Info>
       <Video flipped={flipped}>
-        <video src={video.src} />
+        <ReactPlayer
+          url={video.src}
+          light={video.placeholder}
+          controls
+          height="100%"
+          width="100%"
+          config={{
+            youtube: {
+              playerVars: {
+                autoplay: 1,
+              }
+            },
+          }}
+        />
       </Video>
     </Container>
   </Wrapper>

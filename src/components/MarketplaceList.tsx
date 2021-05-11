@@ -81,7 +81,7 @@ export const MarketplaceList: React.FC<IMarketplaceListProps> = ({ title, placeh
   const pageCount = items ? Math.ceil(items.length / pageSize) : 1;
 
   const handleModal = (state: boolean) => {
-    !modalOpen && toggleLockBodyScroll(state);
+    toggleLockBodyScroll(state);
     setModalOpen(state);
   }
 

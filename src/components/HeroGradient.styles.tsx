@@ -57,18 +57,15 @@ export const Info = styled.div(() => [
 ]);
 
 export const Gradient = styled.div(({ colors }: IStyleProps) => [
-  tw`absolute inset-0 bg-black md:rounded-3xl md:mx-6 overflow-hidden`,
+  tw`absolute inset-0 bg-black md:(mx-6 rounded-3xl) overflow-hidden`,
   css`
     span {
-      ${[
-      tw`absolute transform -translate-x-1/2 -translate-y-1/2`,
-      css`
-        height: 500px;
-        width: 500px;
-        border-radius: 500px;
-        filter: blur(60px);
-      `,
-    ]}
+      ${tw`absolute transform -translate-x-1/2 -translate-y-1/2`}
+
+      height: 500px;
+      width: 500px;
+      border-radius: 500px;
+      filter: blur(60px);
 
       &:nth-child(1),
       &:nth-child(2) {

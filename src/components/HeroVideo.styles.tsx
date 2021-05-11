@@ -15,7 +15,7 @@ export const Container = styled.div(({ flipped }: IStyleProps) => [
 ]);
 
 export const Video = styled.div(({ flipped }: IStyleProps) => [
-  tw`w-full h-72 sm:(h-96) md:(h-72 w-3/5) lg:h-96 bg-white rounded-xl shadow-xl`,
+  tw`w-full h-72 sm:(h-96) md:(h-72 w-3/5) lg:h-96 bg-white rounded-xl shadow-xl overflow-hidden`,
   flipped ? tw`md:mr-8` : tw`md:ml-8`
 ]);
 

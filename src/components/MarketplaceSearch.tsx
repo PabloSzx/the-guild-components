@@ -59,13 +59,13 @@ export const MarketplaceSearch: React.FC<IMarketplaceSearchProps> = ({ title, pl
           <Results>
             <MarketplaceList
               title="Trending & Last Update"
-              placeholder="No items available..."
+              placeholder="No products available..."
               pagination={5}
               items={dummyMarketplaceList.items.slice(0, 7)}
             />
             <MarketplaceList
               title="New Release"
-              placeholder="No items available..."
+              placeholder="No products available..."
               pagination={5}
               items={[]}
             />

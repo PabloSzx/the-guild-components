@@ -70,7 +70,8 @@ export const dummyHeroVideo = {
     href: '/docs'
   },
   video: {
-    src: ''
+    src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    placeholder: 'https://ak.picdn.net/shutterstock/videos/1033186691/thumb/1.jpg'
   },
   flipped: true
 };
@@ -94,7 +95,7 @@ export const dummyHeroGradient = {
   title: 'A GraphQL server framework for improved developer experience',
   description: 'Use any Node framework and any GraphQL feature, with the easiest plugins system - A new framework by The Guild',
   link: {
-    label: 'Get started',
+    label: 'Get Started',
     title: 'Learn more about GraphQL Envelop',
     href: '/get-started'
   },
@@ -105,6 +106,16 @@ export const dummyHeroGradient = {
     alt: 'Illustration'
   }
 };
+
+export const dummyHeroMarketplace = {
+  title: 'Marketplace',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec sem ex. Aenean semper vehicula nibh non luctus. In rutrum nisl vitae ligula mollis feugiat.',
+  link: {
+    label: 'Get Started',
+    title: 'Learn more about the ',
+    href: '/marketplace'
+  },
+}
 
 export const dummySubheader = {
   product: {

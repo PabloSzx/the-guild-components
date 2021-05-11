@@ -14,6 +14,7 @@ interface IImage {
 
 interface IVideo {
   src: string
+  placeholder: string
 }
 
 export interface IHeaderProps {
@@ -96,6 +97,12 @@ export interface IHeroGradientProps {
   version?: string
   link?: ILink
   image: IImage
+}
+
+export interface IHeroMarketplaceProps {
+  title: string
+  description: string
+  link: ILink
 }
 
 export interface ICardsColorfulProps {

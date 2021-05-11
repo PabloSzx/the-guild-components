@@ -70,6 +70,7 @@
     "algoliasearch": "^4.9.0",
     "core-js": "^3.8.3",
     "react-instantsearch-dom": "^6.10.3",
+    "react-player": "^2.9.0",
     "tailwindcss": "^2.0.3",
     "twin.macro": "^2.2.3"
   }

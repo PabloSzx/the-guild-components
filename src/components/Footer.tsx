@@ -47,9 +47,7 @@ export const Footer: React.FC<IFooterProps> = ({ sameSite }) => {
     <Wrapper>
       <Container>
         <Line />
-        <Copyright>
-          Belong anywhere. © The Guild, Inc.
-      </Copyright>
+        <Copyright>Belong anywhere. © The Guild, Inc.</Copyright>
         <Logo {...logoOptions}>
           <img src={footerAssets.logo} alt="The Guild" />
         </Logo>

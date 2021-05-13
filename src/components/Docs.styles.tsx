@@ -21,7 +21,7 @@ export const Navigation = styled.aside(() => [
 
     a, summary {
       ${[
-      tw`py-1 font-medium text-sm text-black opacity-60 cursor-pointer hocus:opacity-100`,
+      tw`py-1 font-medium text-sm text-black opacity-60 cursor-pointer outline-none hocus:opacity-100`,
       tw`transition duration-100 ease-in-out`,
     ]}
     }
@@ -61,7 +61,7 @@ export const LegendContent = styled.aside(() => [
 ]);
 
 export const LegendPagination = styled.aside(() => [
-  tw`flex pt-8 lg:py-4`,
+  tw`flex items-center pt-8 lg:py-4`,
   css`
     p {
       display: -webkit-box;

@@ -21,7 +21,7 @@ export const Container = styled.div(() => [
 ]);
 
 export const Navigation = styled.nav(({ isModalOpen }: IStyleProps) => [
-  tw`absolute flex flex-col justify-center bg-white`,
+  tw`fixed flex flex-col justify-center bg-white`,
   tw`transition-all duration-300 ease-in-out`,
   tw`md:(static flex-row flex-1 justify-end items-center transition-none)`,
   css`
@@ -78,8 +78,9 @@ export const CTA = styled.a(() => [
 
 export const Icon = styled.button(({ iconType }: IStyleProps) => [
   tw`flex md:hidden justify-center items-center p-1.5`,
-  tw`bg-transparent border-0 cursor-pointer hover:opacity-70`,
+  tw`bg-transparent border-0 cursor-pointer outline-none hover:opacity-70`,
   tw`transition duration-200 ease-in-out`,
   iconType === 'open' && tw`-mr-1`,
-  iconType === 'close' && tw`absolute top-6 right-6`,
+  iconType === 'close' && tw`absolute top-6 right-6 dark:bg-gray-700 bg-gray-200 rounded-lg`,
 ]);
+

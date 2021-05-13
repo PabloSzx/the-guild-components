@@ -30,7 +30,7 @@ export const MarketplaceSearch: React.FC<IMarketplaceSearchProps> = ({ title, pl
     let results = null;
     if (query) {
       results = dummyMarketplaceList.items.filter(
-        (item) => item.title.toLowerCase().includes(query)
+        (item) => item.title.toLowerCase().includes(query.toLowerCase())
       );
     }
 

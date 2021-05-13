@@ -13,15 +13,12 @@ import {
 
 import { ISubheaderProps } from '../helpers/types';
 import { ThemeContext } from '../helpers/theme';
-import { useWindowSize } from '../helpers/hooks';
 import { headerThemedIcons } from '../helpers/assets';
 import { toggleLockBodyScroll } from '../helpers/modals';
 
 export const Subheader: React.FC<ISubheaderProps> = ({ product, activeLink, links, cta }) => {
   const { isDarkTheme } = React.useContext(ThemeContext);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const windowSize = useWindowSize();
-  const isMobile = windowSize.width && windowSize.width < 768;
 
   const icons = headerThemedIcons(isDarkTheme || false);
 
@@ -41,7 +38,7 @@ export const Subheader: React.FC<ISubheaderProps> = ({ product, activeLink, link
   const renderNavigation = (
     <Navigation isModalOpen={mobileNavOpen}>
       <Icon iconType="close" onClick={() => handleNav(false)}>
-        <img src={icons.close} height="24" width="24" alt="Menu close icon" />
+        <img src={icons.close} height="22" width="22" alt="Menu close icon" />
       </Icon>
       {links.map(link => (
         <Link
@@ -58,7 +55,6 @@ export const Subheader: React.FC<ISubheaderProps> = ({ product, activeLink, link
 
   return (
     <>
-      {isMobile && renderNavigation}
       <Wrapper>
         <Container>
           <Logo href="/" title={`${product.title} - ${product.description}`}>
@@ -68,7 +64,7 @@ export const Subheader: React.FC<ISubheaderProps> = ({ product, activeLink, link
               <p>{product.description}</p>
             </span>
           </Logo>
-          {!isMobile && renderNavigation}
+          {renderNavigation}
           <Controls>
             {cta && (
               <CTA href={cta.href} title={cta.title}>

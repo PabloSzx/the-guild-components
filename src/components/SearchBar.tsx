@@ -18,10 +18,10 @@ import {
 import { Modal } from './Modal';
 
 import {
-  SearchBarButton,
-  SearchBarForm,
-  SearchBarResults,
-  SearchBarHit,
+  SearchButton,
+  SearchForm,
+  SearchResults,
+  SearchHit,
 } from './SearchBar.styles';
 
 import { ISearchBarProps } from '../helpers/types';
@@ -54,7 +54,7 @@ export const SearchBar: React.FC<ISearchBarProps> = ({ accentColor, title, place
   }, [modalOpen]);
 
   const SearchBox: React.FC<SearchBoxProvided> = ({ currentRefinement, refine }) => (
-    <SearchBarForm accentColor={accentColor} >
+    <SearchForm accentColor={accentColor} >
       <form noValidate action="" role="search">
         <img src={icons.search} height="30" width="30" alt="Search icon" />
         <input
@@ -77,7 +77,7 @@ export const SearchBar: React.FC<ISearchBarProps> = ({ accentColor, title, place
           </button>
         )}
       </form>
-    </SearchBarForm>
+    </SearchForm>
   );
 
   const StateResults: React.FC<StateResultsProvided> = ({ searchState, searchResults, children }) => {
@@ -87,7 +87,7 @@ export const SearchBar: React.FC<ISearchBarProps> = ({ accentColor, title, place
       content = <span>No results for <strong>&quot;{searchState.query}&quot;</strong>.</span>
     }
 
-    return <SearchBarResults>{content || children}</SearchBarResults>;
+    return <SearchResults>{content || children}</SearchResults>;
   }
 
   const Hits: React.FC<{ hits: Hit<any>[] }> = ({ hits }) => {
@@ -122,7 +122,7 @@ export const SearchBar: React.FC<ISearchBarProps> = ({ accentColor, title, place
     return (
       <>{
         groupedHits.map(hit => (
-          <SearchBarHit key={hit.level} accentColor={accentColor}>
+          <SearchHit key={hit.level} accentColor={accentColor}>
             <h2>{hit.level}</h2>
             {hit.items.map((subHit: Hit) => (
               <a key={subHit.url} href={subHit.url} target="_blank" rel="noopener noreferrer">
@@ -133,7 +133,7 @@ export const SearchBar: React.FC<ISearchBarProps> = ({ accentColor, title, place
                 </div>
               </a>
             ))}
-          </SearchBarHit>
+          </SearchHit>
         ))
       }</>
     )
@@ -145,10 +145,10 @@ export const SearchBar: React.FC<ISearchBarProps> = ({ accentColor, title, place
 
   return (
     <>
-      <SearchBarButton accentColor={accentColor} onClick={() => handleModal(true)}>
+      <SearchButton accentColor={accentColor} onClick={() => handleModal(true)}>
         <img src={icons.search} height="18" width="18" alt="Search icon" />
         <span>{placeholder}</span>
-      </SearchBarButton>
+      </SearchButton>
       <Modal title={title} visible={modalOpen} placement="top" onCancel={() => handleModal(false)}>
         <InstantSearch indexName={algoliaConfig.searchIndex} searchClient={searchClient}>
           <CustomSearchBox />

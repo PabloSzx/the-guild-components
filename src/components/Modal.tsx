@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import FocusTrap from 'focus-trap-react'
 
 import {
   Body,
@@ -48,21 +49,29 @@ export const Modal: React.FC<IModalProps> = ({ image, title, description, childr
   return (
     <Container isModalOpen={visible}>
       <Overlay isModalOpen={visible} onClick={() => onCancel()} tabIndex={-1} />
-      <Wrapper isModalOpen={visible} placement={placement}>
-        <Header>
-          {image && <HeaderImage src={image.src} alt={image.alt} />}
-          <HeaderInfo>
-            <h2>{title}</h2>
-            {renderDescription()}
-          </HeaderInfo>
-          <CloseButton onClick={() => onCancel()}>
-            <img src={icons.close} height="22" width="22" alt="Modal close icon" />
-          </CloseButton>
-        </Header>
-        <Body>
-          {children}
-        </Body>
-      </Wrapper>
+      <FocusTrap
+        active={visible}
+        focusTrapOptions={{
+          fallbackFocus: "#tgc-modal",
+          clickOutsideDeactivates: true
+        }}
+      >
+        <Wrapper id="tgc-modal" tabIndex={-1} isModalOpen={visible} placement={placement}>
+          <Header>
+            {image && <HeaderImage src={image.src} alt={image.alt} />}
+            <HeaderInfo>
+              <h2>{title}</h2>
+              {renderDescription()}
+            </HeaderInfo>
+            <CloseButton onClick={() => onCancel()}>
+              <img src={icons.close} height="22" width="22" alt="Modal close icon" />
+            </CloseButton>
+          </Header>
+          <Body>
+            {children}
+          </Body>
+        </Wrapper>
+      </FocusTrap>
     </Container>
   );
 };

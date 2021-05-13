@@ -111,7 +111,7 @@ export const Body = styled.div(() => [
 ]);
 
 export const CloseButton = styled.button(() => [
-  tw`absolute top-6 right-6 flex justify-center items-center h-9 w-9 p-0`,
+  tw`absolute top-6 right-6 flex justify-center items-center p-1.5`,
   tw`dark:bg-gray-700 bg-gray-200 border-0 rounded-lg cursor-pointer outline-none hocus:opacity-70`,
   tw`transition duration-200 ease-in-out`,
 ]);

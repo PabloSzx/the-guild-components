@@ -90,12 +90,21 @@ export const TableItem = styled.tr(() => [
 
       button {
         ${[
-      tw`flex justify-center items-center h-10 w-10 bg-gray-200 border-0 rounded-lg cursor-pointer outline-none`,
-      tw`hocus:opacity-50 transition duration-200 ease-in-out`,
+      tw`flex justify-center items-center h-10 w-10 bg-gray-200 hocus:bg-black border-0 rounded-lg cursor-pointer outline-none`,
+      tw`transition duration-150 ease-in-out`,
     ]}
 
+&:hover, &:focus {
+          img {
+            filter: invert(1);
+          }
+        }
+
         img {
-          ${tw`w-5 m-0 transform -rotate-90`}
+          ${[
+      tw`w-5 m-0 ml-0.5 transform -rotate-90`,
+      tw`transition duration-150 ease-in-out`
+    ]}
         }
       }
     }

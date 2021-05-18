@@ -1,9 +1,12 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IDocsProps } from '../helpers/types';
-// import { } from '../helpers/dummy';
+import {
+  dummyDocsContent,
+  dummyDocsLegend,
+  dummyDocsNavigation,
+} from '../helpers/dummy';
 
-import { Docs } from './Docs';
+import { Docs, DocsContent, DocsLegend, DocsNavigation } from './Docs';
 
 export default {
   title: 'Components/Docs',
@@ -17,8 +20,14 @@ export default {
   }
 } as Meta
 
-const Template: Story<IDocsProps> = args => (
-  <Docs {...args} />
+const Template: Story = () => (
+  <Docs>
+    <DocsNavigation {...dummyDocsNavigation} />
+    <DocsContent>
+      {dummyDocsContent}
+    </DocsContent>
+    <DocsLegend {...dummyDocsLegend} />
+  </Docs>
 )
 
 export const Default = Template.bind({})

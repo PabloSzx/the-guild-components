@@ -33,7 +33,7 @@ export default {
       sourcemap: true,
     },
   ],
-  external: ['algoliasearch/lite', 'react-instantsearch-dom', 'react-player/lazy'],
+  external: ['algoliasearch/lite', 'react-instantsearch-dom', 'react-player/lazy', 'object-assign'],
   plugins: [
     // Automatically add peerDependencies to the `external` config
     // https://rollupjs.org/guide/en/#external

@@ -96,7 +96,7 @@ export interface IHeroGradientProps {
   colors?: string[]
   version?: string
   link?: ILink
-  image: IImage
+  image?: IImage
 }
 
 export interface IHeroMarketplaceProps {
@@ -150,5 +150,25 @@ export interface IMarketplaceSearchProps {
   placeholder: string
 }
 
-export interface IDocsProps {
+export interface IDocsNavItem {
+  name: string
+  href: string
+  isPage: boolean
+  isCategory: boolean
+  paths?: any
+}
+
+export interface IDocsNavigationProps {
+  items: IDocsNavItem[]
+}
+
+interface IDocsLegendLink {
+  href: string
+  name: string
+}
+export interface IDocsLegendProps {
+  items: (string | number)[][]
+  prev: IDocsLegendLink,
+  current: IDocsLegendLink,
+  next: IDocsLegendLink
 }

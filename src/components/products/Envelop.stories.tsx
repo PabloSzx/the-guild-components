@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { GlobalStyles } from '../../helpers/styles';
 
@@ -12,10 +12,13 @@ import { HeroVideo } from '../HeroVideo';
 import { InfoList } from '../InfoList';
 import { MarketplaceSearch } from '../MarketplaceSearch';
 import { Subheader } from '../Subheader';
-import { Docs } from '../Docs';
+import { Docs, DocsContent, DocsLegend, DocsNavigation } from '../Docs';
 
 import {
   dummyCardsColorful,
+  dummyDocsContent,
+  dummyDocsLegend,
+  dummyDocsNavigation,
   dummyFeatureList,
   dummyHeroGradient,
   dummyHeroIllustration,
@@ -59,7 +62,13 @@ const Template: Story = ({ page }) => {
     ),
     '/docs': (
       <>
-        <Docs />
+        <Docs>
+          <DocsNavigation {...dummyDocsNavigation} />
+          <DocsContent>
+            {dummyDocsContent}
+          </DocsContent>
+          <DocsLegend {...dummyDocsLegend} />
+        </Docs>
       </>
     )
   }

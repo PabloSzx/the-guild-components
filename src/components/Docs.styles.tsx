@@ -16,25 +16,34 @@ export const Navigation = styled.aside(() => [
     }
 
     h3 {
-      ${tw`mt-8 font-bold text-xs uppercase`}
+      ${tw`mt-8 mb-2 font-bold text-xs uppercase`}
+    }
+
+    a, details, summary {
+      ${tw`transition duration-100 ease-in-out`}
     }
 
     a, summary {
-      ${[
-      tw`py-1 font-medium text-sm text-black opacity-60 cursor-pointer outline-none hocus:opacity-100`,
-      tw`transition duration-100 ease-in-out`,
-    ]}
+      ${tw`py-1 font-medium text-sm text-black opacity-60 cursor-pointer outline-none hocus:opacity-100`}
     }
 
     a {
-      ${tw`block no-underline`}
+      ${tw`block no-underline hocus:(px-2 opacity-100 rounded bg-gray-100)`}
     }
 
     details {
       ${tw`-ml-3`}
 
       a {
-        ${tw`ml-1 pl-6 border-0 border-l-2 border-solid border-gray-400`}
+        ${tw`ml-1 pl-4 border-0 border-l-2 border-solid border-gray-400 hocus:(pl-6 rounded-tl-none rounded-bl-none)`}
+      }
+
+      details {
+        ${tw`ml-1 pl-4 border-0 border-l-2 border-solid border-gray-400 opacity-60 hocus:opacity-100`}
+
+        summary {
+          ${tw`opacity-100`}
+        }
       }
     }
   `
@@ -56,6 +65,20 @@ export const LegendContent = styled.aside(() => [
       tw`block w-fit my-2.5 last:mb-0 text-sm text-black no-underline opacity-60 hocus:opacity-100`,
       tw`transition duration-100 ease-in-out`,
     ]}
+
+      &.active {
+        ${tw`font-semibold opacity-100!`}
+      }
+
+      &[data-indent="1"] {
+        ${tw`ml-4`}
+      } 
+      &[data-indent="2"] {
+        ${tw`ml-6`}
+      } 
+      &[data-indent="3"] {
+        ${tw`ml-8`}
+      } 
     }
   `
 ]);
@@ -75,8 +98,11 @@ export const LegendPagination = styled.aside(() => [
     a {
       ${[
       tw`flex justify-center items-center h-8 w-8 bg-gray-100 hocus:bg-black rounded-lg`,
-      tw`transition duration-200 ease-in-out`,
+      tw`transition duration-150 ease-in-out`,
       css`
+        &[data-disabled] {
+          ${tw`select-none pointer-events-none opacity-50`}
+        }
         &:last-child {
           img {
             transform: scaleX(-1);
@@ -90,7 +116,7 @@ export const LegendPagination = styled.aside(() => [
         }
 
         img {
-          ${tw`transition duration-200 ease-in-out`}
+          ${tw`transition duration-150 ease-in-out`}
         }
       `
     ]}
@@ -102,7 +128,7 @@ export const Content = styled.section(() => [
   tw`lg:(flex-1 -mt-4 px-7)`,
   css`
     h1, h2, h3, h4, h5, h6 {
-      ${tw`font-bold my-4`}
+      ${tw`my-4 -mt-24 pt-24 font-bold`}
     }
 
     h1 {

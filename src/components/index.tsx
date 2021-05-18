@@ -1,11 +1,15 @@
 
+export { CardsColorful } from './CardsColorful';
+export { Docs, DocsContent, DocsLegend, DocsNavigation } from './Docs';
 export { FeatureList } from './FeatureList';
 export { Footer } from './Footer';
 export { Header } from './Header';
 export { HeroGradient } from './HeroGradient';
 export { HeroIllustration } from './HeroIllustration';
+export { HeroMarketplace } from './HeroMarketplace';
 export { HeroVideo } from './HeroVideo';
 export { InfoList } from './InfoList';
+export { MarketplaceSearch } from './MarketplaceSearch';
 export { Modal } from './Modal';
 export { SearchBar } from './SearchBar';
 export { Subheader } from './Subheader';

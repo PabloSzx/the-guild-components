@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
-import { ISearchBarProps } from '../helpers/types';
+import { ISearchBarProps } from '../types/components';
 
 import { SearchBar } from './SearchBar';
 

@@ -10,7 +10,7 @@ import {
 } from './HeaderModal.styles';
 
 
-import { IHeaderModalProps } from '../helpers/types';
+import { IHeaderModalProps } from '../types/components';
 import { productThemedIcons } from '../helpers/assets';
 import { ThemeContext } from '../helpers/theme';
 

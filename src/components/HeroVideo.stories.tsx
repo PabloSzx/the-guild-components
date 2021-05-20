@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IHeroVideoProps } from '../helpers/types';
+import { IHeroVideoProps } from '../types/components';
 import { dummyHeroVideo } from '../helpers/dummy';
 
 import { HeroVideo } from './HeroVideo';

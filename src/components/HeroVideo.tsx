@@ -8,7 +8,7 @@ import {
   Video,
 } from './HeroVideo.styles';
 
-import { IHeroVideoProps } from '../helpers/types';
+import { IHeroVideoProps } from '../types/components';
 
 export const HeroVideo: React.FC<IHeroVideoProps> = ({ title, description, link, video, flipped }) => (
   <Wrapper>

@@ -12,7 +12,7 @@ import {
   Wrapper,
 } from './Modal.styles';
 
-import { IModalProps } from '../helpers/types';
+import { IModalProps } from '../types/components';
 import { modalThemedIcons } from '../helpers/assets';
 import { ThemeContext } from '../helpers/theme';
 import { useKeyPress } from '../helpers/hooks';

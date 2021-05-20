@@ -13,7 +13,7 @@ import {
 
 import { ThemeContext } from '../helpers/theme';
 import { docsThemedAssets } from '../helpers/assets';
-import { IDocsNavigationProps, IDocsLegendProps } from '../helpers/types';
+import { IDocsNavigationProps, IDocsLegendProps } from '../types/components';
 
 export const DocsNavigation: React.FC<IDocsNavigationProps> = ({ items }) => {
   const renderNavigation = (items: IDocsNavigationProps['items']) => (

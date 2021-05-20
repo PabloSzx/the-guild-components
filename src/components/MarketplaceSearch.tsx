@@ -11,7 +11,7 @@ import {
   Wrapper,
 } from './MarketplaceSearch.styles';
 
-import { IMarketplaceSearchProps, IMarketplaceItemProps } from '../helpers/types';
+import { IMarketplaceSearchProps, IMarketplaceItemProps } from '../types/components';
 import { marketplaceThemedAssets } from '../helpers/assets';
 import { ThemeContext } from '../helpers/theme';
 

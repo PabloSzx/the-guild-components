@@ -42,7 +42,8 @@ import hashtagIconLight from '../static/icons/hashtag-light.svg';
 import arrowIconDark from '../static/icons/arrow-dark.svg';
 import arrowIconLight from '../static/icons/arrow-light.svg';
 
-export const headerThemedIcons = (isDark: boolean) => ({
+
+export const headerThemedIcons = (isDark: boolean): any => ({
   themeToggle: isDark ? moonIconLight : moonIconDark,
   menu: isDark ? hamburgerIconLight : hamburgerIconDark,
   caret: isDark ? caretIconLight : caretIconDark,
@@ -52,7 +53,7 @@ export const headerThemedIcons = (isDark: boolean) => ({
   logoMono: isDark ? logoMonoLight : logoMonoDark
 })
 
-export const productThemedIcons = (isDark: boolean) => ({
+export const productThemedIcons = (isDark: boolean): any => ({
   angular: isDark ? productAngular : productAngular,
   cli: isDark ? productCLI : productCLI,
   codeGen: isDark ? productCodeGenerator : productCodeGenerator,
@@ -70,7 +71,7 @@ export const productThemedIcons = (isDark: boolean) => ({
   whatsapp: isDark ? productWhatsapp : productWhatsapp,
 })
 
-export const searchBarThemedIcons = (isDark: boolean) => ({
+export const searchBarThemedIcons = (isDark: boolean): any => ({
   search: isDark ? searchIconLight : searchIconDark,
   close: isDark ? closeIconLight : closeIconDark,
   page: isDark ? pageIconLight : pageIconDark,
@@ -78,20 +79,20 @@ export const searchBarThemedIcons = (isDark: boolean) => ({
   content: isDark ? hamburgerIconLight : hamburgerIconDark,
 })
 
-export const modalThemedIcons = (isDark: boolean) => ({
+export const modalThemedIcons = (isDark: boolean): any => ({
   close: isDark ? closeIconLight : closeIconDark,
   externalLink: isDark ? externalLinkIconLight : externalLinkIconDark,
 })
 
-export const footerThemedAssets = (isDark: boolean) => ({
+export const footerThemedAssets = (isDark: boolean): any => ({
   logo: isDark ? logoMonoLight : logoMonoDark,
 })
 
-export const marketplaceThemedAssets = (isDark: boolean) => ({
+export const marketplaceThemedAssets = (isDark: boolean): any => ({
   caret: isDark ? caretSlimIconLight : caretSlimIconDark,
   search: isDark ? searchIconLight : searchIconDark,
 })
 
-export const docsThemedAssets = (isDark: boolean) => ({
+export const docsThemedAssets = (isDark: boolean): any => ({
   arrow: isDark ? arrowIconLight : arrowIconDark,
 })

@@ -11,7 +11,7 @@ import {
 
 import { ThemeContext } from '../helpers/theme';
 import { footerThemedAssets } from '../helpers/assets';
-import { IFooterProps } from '../helpers/types';
+import { IFooterProps } from '../types/components';
 
 const links = [{
   label: 'Twitter',

@@ -14,34 +14,30 @@ const config = {
 };
 
 export default {
-  input: "src/components/index.tsx",
+  input: "src/index.tsx",
   output: [
     {
-      // ES Modules: Modern browser imports
-
-      // Browser usage:
-      // <script type="module">
-      //   import { func } from 'my-lib';
-      //   func();
-      // </script>
-
-      // js/tsx file usage:
-      // import { func } from 'my-lib';
-      // func();
-      file: pkg.module,
-      format: "es",
-      sourcemap: true,
+      file: pkg.main,
+      format: 'cjs',
+      sourcemap: 'inline',
     },
+    {
+      file: pkg.module,
+      format: 'esm',
+      sourcemap: 'inline',
+    }
   ],
-  external: ['algoliasearch/lite', 'react-instantsearch-dom', 'react-player/lazy', 'object-assign'],
+  external: [
+    'algoliasearch/lite', 
+    'object-assign',
+    'polished', 
+    'react-instantsearch-dom', 
+    'react-player/lazy', 
+  ],
   plugins: [
     // Automatically add peerDependencies to the `external` config
     // https://rollupjs.org/guide/en/#external
     peerDepsExternal(),
-
-    // External modules not to include in your bundle (eg: 'lodash', 'moment' etc.)
-    // https://rollupjs.org/guide/en/#external
-    // external: []
 
     resolve({ extensions: config.extensions }),
 

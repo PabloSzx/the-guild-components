@@ -18,7 +18,7 @@ import {
   Gradient
 } from './HeroMarketplace.styles';
 
-import { IHeroMarketplaceProps } from '../helpers/types';
+import { IHeroMarketplaceProps } from '../types/components';
 
 export const HeroMarketplace: React.FC<IHeroMarketplaceProps> = ({ title, description, link }) => (
   <Wrapper>

@@ -11,12 +11,12 @@ import {
   Wrapper,
 } from './Subheader.styles';
 
-import { ISubheaderProps } from '../helpers/types';
+import { ISubheaderProps } from '../types/components';
 import { ThemeContext } from '../helpers/theme';
 import { headerThemedIcons } from '../helpers/assets';
 import { toggleLockBodyScroll } from '../helpers/modals';
 
-export const Subheader: React.FC<ISubheaderProps> = ({ product, activeLink, links, cta }) => {
+export const Subheader: React.FC<ISubheaderProps> = ({ product, activeLink, links, cta, router }) => {
   const { isDarkTheme } = React.useContext(ThemeContext);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
@@ -46,6 +46,14 @@ export const Subheader: React.FC<ISubheaderProps> = ({ product, activeLink, link
           title={link.title}
           isActiveLink={link.active}
           href={link.href}
+          onClick={(e) => {
+            if (!router || !router.push) {
+              return;
+            }
+
+            e.preventDefault();
+            router.push(link.href);
+          }}
         >
           {link.label}
         </Link>

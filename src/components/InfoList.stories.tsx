@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { IInfoListProps } from '../helpers/types';
+import { IInfoListProps } from '../types/components';
 import { dummyInfoList } from '../helpers/dummy';
 
 import { InfoList } from './InfoList';

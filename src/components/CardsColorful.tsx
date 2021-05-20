@@ -7,7 +7,7 @@ import {
   Wrapper,
 } from './CardsColorful.styles';
 
-import { ICardsColorfulProps } from '../helpers/types';
+import { ICardsColorfulProps } from '../types/components';
 
 export const CardsColorful: React.FC<ICardsColorfulProps> = ({ cards }) => (
   <Wrapper>

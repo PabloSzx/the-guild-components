@@ -33,6 +33,7 @@ export interface ISubheaderProps {
   activeLink: string
   links: ILink[]
   cta: ILink
+  router?: any
 }
 
 export interface IHeaderModalProps {
@@ -154,8 +155,8 @@ export interface IDocsNavItem {
   name: string
   href: string
   isPage: boolean
-  isCategory: boolean
-  paths?: any
+  isCategory?: boolean
+  paths?: IDocsNavItem[]
 }
 
 export interface IDocsNavigationProps {

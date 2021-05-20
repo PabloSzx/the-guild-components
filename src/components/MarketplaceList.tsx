@@ -20,7 +20,7 @@ import {
   IMarketplaceListProps,
   IMarketplaceItemsProps,
   IMarketplaceItemProps
-} from '../helpers/types';
+} from '../types/components';
 import { ThemeContext } from '../helpers/theme';
 import { marketplaceThemedAssets } from '../helpers/assets';
 import { toggleLockBodyScroll } from '../helpers/modals';

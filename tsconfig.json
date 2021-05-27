@@ -19,7 +19,8 @@
     "paths": {
       "the-guild-components": ["packages/the-guild-components/src/index.tsx"],
       "@theguild/components": ["packages/components/src/index.tsx"]
-    }
+    },
+    "preserveWatchOutput": true
   },
   "include": ["packages"],
   "exclude": ["packages/**/*.stories.tsx", "**/*.styles.tsx"]
